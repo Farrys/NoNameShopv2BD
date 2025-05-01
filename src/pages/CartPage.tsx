@@ -36,13 +36,13 @@ export default function CartPage() {
         <div className="container">
           <div className="text-center max-w-md mx-auto">
             <ShoppingBag size={64} className="mx-auto text-gray-300 mb-6" />
-            <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
+            <h1 className="text-2xl font-bold mb-4">Ваша корзина пуста</h1>
             <p className="text-gray-500 mb-8">
-              Looks like you haven't added anything to your cart yet.
-              Browse our products and find something you'll love!
+            Похоже, вы еще ничего не добавили в свою корзину.
+Просмотрите наши продукты и найдите то, что вам понравится!
             </p>
             <Link to="/products" className="btn btn-primary px-8">
-              Start Shopping
+              Начните делать покупки
             </Link>
           </div>
         </div>
@@ -53,14 +53,14 @@ export default function CartPage() {
   return (
     <div className="py-12">
       <div className="container">
-        <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
+        <h1 className="text-3xl font-bold mb-8">Корзина</h1>
         
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Cart Items */}
           <div className="lg:w-2/3">
             <div className="bg-white rounded-lg shadow-sm mb-4 overflow-hidden">
               <div className="p-4 border-b">
-                <h2 className="font-medium">Cart Items ({items.length})</h2>
+                <h2 className="font-medium">Товары в Корзине ({items.length})</h2>
               </div>
               
               <div className="divide-y">
@@ -139,7 +139,7 @@ export default function CartPage() {
                 to="/products" 
                 className="text-primary hover:underline flex items-center"
               >
-                ← Continue Shopping
+                ← Продолжить покупки
               </Link>
             </div>
           </div>
@@ -148,24 +148,24 @@ export default function CartPage() {
           <div className="lg:w-1/3">
             <div className="bg-white rounded-lg shadow-sm overflow-hidden sticky top-24">
               <div className="p-4 border-b">
-                <h2 className="font-medium">Order Summary</h2>
+                <h2 className="font-medium">Резюме заказа</h2>
               </div>
               
               <div className="p-4 space-y-4">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Subtotal</span>
+                  <span className="text-gray-600">Суммка заказа до применения налога</span>
                   <span className="font-medium">{formatPrice(subtotal)}</span>
                 </div>
                 
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Shipping</span>
+                  <span className="text-gray-600">Отправка</span>
                   <span className="font-medium">
                     {shippingCost === 0 ? 'Free' : formatPrice(shippingCost)}
                   </span>
                 </div>
                 
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Tax (7%)</span>
+                  <span className="text-gray-600">Налог (7%)</span>
                   <span className="font-medium">{formatPrice(tax)}</span>
                 </div>
                 
@@ -178,7 +178,7 @@ export default function CartPage() {
                 
                 <div className="border-t pt-4">
                   <div className="flex justify-between">
-                    <span className="font-medium">Total</span>
+                    <span className="font-medium">Итоговая сумма заказа</span>
                     <span className="font-bold text-xl">{formatPrice(total)}</span>
                   </div>
                 </div>
@@ -199,11 +199,11 @@ export default function CartPage() {
                         type="submit"
                         className="btn btn-outline ml-2"
                       >
-                        Apply
+                        Применять
                       </button>
                     </div>
                     <p className="text-xs text-gray-500 mt-1">
-                      Try "DISCOUNT10" for 10% off
+                      Попробуйте "Discount10" для скидки 10%
                     </p>
                   </form>
                 )}
@@ -213,7 +213,7 @@ export default function CartPage() {
                   to={isAuthenticated ? "/checkout" : "/login?redirect=checkout"}
                   className="btn btn-primary w-full"
                 >
-                  {isAuthenticated ? 'Proceed to Checkout' : 'Login to Checkout'}
+                  {isAuthenticated ? 'Перейти к оформлению заказа' : 'Войдите в систему для оформления заказа'}
                 </Link>
               </div>
             </div>

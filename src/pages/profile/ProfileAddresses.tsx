@@ -78,14 +78,14 @@ export default function ProfileAddresses() {
   return (
     <div className="bg-white rounded-lg shadow-sm overflow-hidden">
       <div className="p-4 border-b flex justify-between items-center">
-        <h2 className="font-medium">My Addresses</h2>
+        <h2 className="font-medium">Мои адреса</h2>
         {!isAdding && !isEditing && (
           <button
             onClick={() => setIsAdding(true)}
             className="btn btn-sm btn-outline flex items-center"
           >
             <Plus size={16} className="mr-1" />
-            Add New Address
+            Добавить новый адрес
           </button>
         )}
       </div>
@@ -94,13 +94,13 @@ export default function ProfileAddresses() {
         {isAdding || isEditing ? (
           <form onSubmit={isEditing ? handleEditSubmit : handleAddSubmit} className="max-w-xl">
             <h3 className="font-medium mb-4">
-              {isEditing ? 'Edit Address' : 'Add New Address'}
+              {isEditing ? 'Редактировать адрес' : 'Добавить новый адрес'}
             </h3>
             
             <div className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Address Name
+                  Куда доставка
                 </label>
                 <input
                   id="name"
@@ -109,14 +109,14 @@ export default function ProfileAddresses() {
                   value={formData.name}
                   onChange={handleChange}
                   className="input w-full"
-                  placeholder="Home, Work, etc."
+                  placeholder="Домой, на работу, etc."
                   required
                 />
               </div>
               
               <div>
                 <label htmlFor="street" className="block text-sm font-medium text-gray-700 mb-1">
-                  Street Address
+                  Адрес улицы
                 </label>
                 <input
                   id="street"
@@ -125,7 +125,7 @@ export default function ProfileAddresses() {
                   value={formData.street}
                   onChange={handleChange}
                   className="input w-full"
-                  placeholder="123 Main St, Apt 4B"
+                  placeholder="Улица, дом, подъезд, квартира, этаж"
                   required
                 />
               </div>
@@ -133,7 +133,7 @@ export default function ProfileAddresses() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-1">
-                    City
+                    Город
                   </label>
                   <input
                     id="city"
@@ -148,7 +148,7 @@ export default function ProfileAddresses() {
                 
                 <div>
                   <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">
-                    State / Province
+                    Государство / провинция
                   </label>
                   <input
                     id="state"
@@ -180,7 +180,7 @@ export default function ProfileAddresses() {
                 
                 <div>
                   <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-1">
-                    Country
+                    Страна
                   </label>
                   <select
                     id="country"
@@ -190,11 +190,11 @@ export default function ProfileAddresses() {
                     className="input w-full"
                     required
                   >
-                    <option value="">Select a country</option>
-                    <option value="USA">United States</option>
-                    <option value="Canada">Canada</option>
-                    <option value="UK">United Kingdom</option>
-                    <option value="Australia">Australia</option>
+                    <option value="">Выберите страну</option>
+                    <option value="Russia">Россия</option>
+                    <option value="Canada">Канада</option>
+                    <option value="UK">США</option>
+                    <option value="Australia">Австралия</option>
                     {/* Add more countries as needed */}
                   </select>
                 </div>

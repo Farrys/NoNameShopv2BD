@@ -33,7 +33,7 @@ const mockUsers: User[] = [
         city: 'San Francisco',
         state: 'CA',
         zipCode: '94105',
-        country: 'USA',
+        country: 'Russia',
         isDefault: true,
       },
     ],

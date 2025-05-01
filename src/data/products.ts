@@ -12,8 +12,8 @@ export const products: Product[] = [
     discountPrice: 24.99,
     category: "clothing",
     images: [
-      "https://images.pexels.com/photos/9594655/pexels-photo-9594655.jpeg",
-      "https://images.pexels.com/photos/9594651/pexels-photo-9594651.jpeg"
+      "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/8532616/pexels-photo-8532616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     ],
     brand: "UrbanStyle",
     rating: 4.7,
@@ -99,8 +99,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Wool Blend Blazer",
-    description: "This sophisticated wool blend blazer brings versatile elegance to your wardrobe. Featuring a modern cut, notched lapels, and quality lining, it transitions effortlessly from office to evening occasions.",
+    name: "Шерстяная смесь пиджака",
+    description: "Этот изысканный пиджак для шерсти привносит универсальную элегантность в ваш гардероб.Показывая современную режущую, надрезанные лацканы и качественную подкладку, он легко переходит от офиса к вечерним случаям.",
     price: 149.99,
     category: "clothing",
     images: [
@@ -115,7 +115,7 @@ export const products: Product[] = [
         userId: "user5",
         userName: "Jordan Lee",
         rating: 5,
-        comment: "Excellent quality and perfect fit. Very impressed!",
+        comment: "Отличное качество и идеальное посадка.Очень впечатлен!",
         createdAt: "2023-02-15T16:40:00Z"
       }
     ],
@@ -126,8 +126,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Hooded Sweatshirt",
-    description: "Stay warm and stylish with this comfortable hooded sweatshirt. Made from a soft cotton blend with a brushed interior for extra warmth, it features a front kangaroo pocket, adjustable drawstring hood, and ribbed cuffs and hem.",
+    name: "Толстовка с капюшоном",
+    description: "Сохраняйте теплые и стильные с этой удобной толстовкой с капюшоном.Изготовленная из мягкой хлопковой смеси с матовым интерьером для дополнительного тепла, имеет передний карман кенгуру, регулируемый капюшон с застенчиванием, а также ребристые манжеты и подол.",
     price: 54.99,
     discountPrice: 44.99,
     category: "clothing",
@@ -155,8 +155,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Knit Sweater",
-    description: "This luxurious knit sweater combines comfort with elegant style. Crafted from a soft cotton-wool blend, it features a classic crew neck, ribbed cuffs and hem, and a relaxed fit that's perfect for layering in colder weather.",
+    name: "Вязаный свитер",
+    description: "Этот роскошный трикотажный свитер сочетает в себе комфорт с элегантным стилем.Изготовленная из мягкой хлопковой валковой смеси, имеет классическую шею экипажа, ребристые манжеты и подол, а также расслабленная посадка, которая идеально подходит для наслоения в более холодную погоду.",
     price: 89.99,
     category: "clothing",
     images: [
@@ -182,8 +182,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Summer Dress",
-    description: "This lightweight summer dress combines style with comfort for warm weather days. Made from breathable cotton with a hint of stretch, it features a flattering A-line silhouette, adjustable straps, and convenient side pockets.",
+    name: "Летнее платье",
+    description: "Это легкое летнее платье сочетает в себе стиль с комфортом в теплую погоду.Изготовленный из дышащего хлопка с оттенком растяжения, он имеет лестный силуэт A-Line, регулируемые ремни и удобные боковые карманы.",
     price: 69.99,
     category: "clothing",
     images: [
@@ -196,9 +196,9 @@ export const products: Product[] = [
       {
         id: uuidv4(),
         userId: "user8",
-        userName: "Riley Martinez",
+        userName: "Райли Мартинес",
         rating: 5,
-        comment: "Love this dress! It's comfortable, flattering, and has pockets!",
+        comment: "Люблю это платье!Это удобно, лестно и имеет карманы!",
         createdAt: "2023-06-30T09:14:00Z"
       }
     ],
@@ -211,8 +211,8 @@ export const products: Product[] = [
   // Electronics
   {
     id: uuidv4(),
-    name: "Wireless Noise-Cancelling Headphones",
-    description: "Experience premium audio with these wireless noise-cancelling headphones. Featuring advanced acoustic technology, they deliver crystal-clear sound while effectively blocking external noise. The memory foam ear cushions and adjustable headband ensure comfortable all-day wear, while the 30-hour battery life keeps your music playing through long commutes and flights.",
+    name: "Беспроводные наушники с шумоподавлением",
+    description: "Опыт премиум-аудио с этими беспроводными наушниками с шумоподавлением.Показывая передовую акустическую технологию, они обеспечивают кристально чистый звук, эффективно блокируя внешний шум.Ушные подушки для ушей памяти и регулируемая повязка на голову обеспечивают удобный износ в течение всего дня, в то время как 30-часовое срок службы батареи поддерживает вашу музыку в течение длительных поездок и рейсов.",
     price: 249.99,
     discountPrice: 199.99,
     category: "electronics",
@@ -228,7 +228,7 @@ export const products: Product[] = [
         userId: "user9",
         userName: "Alex Chen",
         rating: 5,
-        comment: "These headphones are incredible! The noise cancellation is best-in-class.",
+        comment: "Эти наушники невероятны!Шумовая отмена лучше всего в своем классе.",
         createdAt: "2023-04-18T15:33:00Z"
       },
       {
@@ -236,7 +236,7 @@ export const products: Product[] = [
         userId: "user10",
         userName: "Jordan Taylor",
         rating: 4,
-        comment: "Great sound quality and comfortable for long periods. Battery life is as advertised.",
+        comment: "Отличное качество звука и удобное в течение длительных периодов времени.Срок службы батареи так же рекламируется.",
         createdAt: "2023-05-02T11:27:00Z"
       }
     ],
@@ -248,7 +248,7 @@ export const products: Product[] = [
   {
     id: uuidv4(),
     name: "Ultra HD Smart TV 55\"",
-    description: "Transform your home entertainment with this stunning 55-inch Ultra HD Smart TV. Featuring 4K resolution, HDR support, and local dimming zones, it delivers breathtaking picture quality with deep blacks and vibrant colors. The built-in smart platform gives you access to all your favorite streaming apps, while the voice control functionality makes finding content effortless.",
+    description: "Просмотр домашних развлечений с этим потрясающим 55-дюймовым Ultra HD Smart TV это прекрасно.Обладая разрешением 4K, поддержкой HDR и местными зонами для затемнения, он обеспечивает захватывающее захватывающее качество изображения с глубокими черными и яркими цветами.Встроенная интеллектуальная платформа предоставляет вам доступ ко всем вашим любимым потоковым приложениям, в то время как функциональность голосового управления делает поиск контента без усилий.",
     price: 799.99,
     discountPrice: 699.99,
     category: "electronics",
@@ -264,7 +264,7 @@ export const products: Product[] = [
         userId: "user11",
         userName: "Morgan Lewis",
         rating: 5,
-        comment: "Incredible picture quality and very intuitive smart features!",
+        comment: "Невероятное качество изображения и очень интуитивно понятные умные функции!",
         createdAt: "2023-03-30T14:22:00Z"
       }
     ],
@@ -274,8 +274,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Professional Digital Camera",
-    description: "Capture life's moments with exceptional clarity using this professional digital camera. The 24.2MP full-frame sensor delivers stunning image quality even in challenging lighting conditions, while the advanced autofocus system ensures your subjects are always sharp. With 4K video capabilities, 10fps continuous shooting, and weather-sealed construction, it's perfect for both professional photographers and serious enthusiasts.",
+    name: "Профессиональная цифровая камера",
+    description: "запечатлетьМоментыЖизниСИсключительнойЯсностью,ИспользуяЭтуПрофессиональнуюЦифровуюКамеру24,2МегапиксельныйДатчикПолнокадровогоДатчикаОбеспечиваетПотрясающееКачествоИзображенияДажеВСложныхУсловияхОсвещения,ВТоВремяКакРасширеннаяСистемаАвтофокусированияГарантирует,ЧтоВашиСубъектыВсегдаОстрыеБлагодаря4KВидеоВозможностей,НепрерывнойСтрельбе10КадровВСекундуИСтроительством,ЗастрахованнойПогодой,ОнаИдеальноПодходитКакДляПрофессиональныхФотографов,ТакИДляСерьезныхЭнтузиастов",
     price: 1299.99,
     category: "electronics",
     images: [
@@ -290,7 +290,7 @@ export const products: Product[] = [
         userId: "user12",
         userName: "Jamie Rivera",
         rating: 5,
-        comment: "Incredible camera! The image quality is outstanding and the ergonomics are perfect.",
+        comment: "Невероятная камера!Качество изображения выдающееся, а эргономика идеальна.",
         createdAt: "2023-02-14T09:18:00Z"
       }
     ],
@@ -300,8 +300,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Smart Fitness Watch",
-    description: "Take control of your health and fitness with this advanced smart fitness watch. Track your steps, heart rate, sleep quality, and more with precision sensors, while GPS functionality monitors your running and cycling routes. The vibrant touch display shows notifications from your smartphone, and the 7-day battery life means less charging and more activity.",
+    name: "Умные фитнес-часы",
+    description: "Возьмите под контроль свое здоровье и физическую форму с помощью этих расширенных Smart Fitness Watch.Отслеживайте свои шаги, частоту сердечных сокращений, качество сна и больше с точными датчиками, в то время как функциональность GPS контролирует ваши беговые и велосипедные маршруты.На дискром на сенсорном дисплее показаны уведомления от вашего смартфона, а 7-дневное срок службы батареи означает меньшую зарядку и большую активность.",
     price: 179.99,
     discountPrice: 149.99,
     category: "electronics",
@@ -317,7 +317,7 @@ export const products: Product[] = [
         userId: "user13",
         userName: "Taylor Johnson",
         rating: 5,
-        comment: "Love this watch! The fitness tracking is accurate and the app is easy to use.",
+        comment: "Люблю эти часы!Фитнес -отслеживание точное, и приложение легко использовать.",
         createdAt: "2023-05-25T16:40:00Z"
       }
     ],
@@ -328,8 +328,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Wireless Bluetooth Speaker",
-    description: "Bring your music to life with this powerful wireless Bluetooth speaker. Dual drivers and passive bass radiators deliver rich, room-filling sound, while the waterproof design makes it perfect for outdoor adventures. With a 20-hour battery life and built-in microphone for calls, it's the ultimate portable audio companion.",
+    name: "Беспроводной динамик Bluetooth",
+    description: "Воплотите свою музыку в жизнь с помощью этого мощного беспроводного оратора Bluetooth.Двойные драйверы и пассивные басовые радиаторы доставляют богатый, заполняющий номера звук, в то время как водонепроницаемый дизайн делает его идеальным для приключений на открытом воздухе.С 20-часовым сроком службы батареи и встроенным микрофоном для вызовов, это Ultimate Portable Audio Companion.",
     price: 129.99,
     category: "electronics",
     images: [
@@ -344,7 +344,7 @@ export const products: Product[] = [
         userId: "user14",
         userName: "Casey Wilson",
         rating: 4,
-        comment: "Great sound quality for the size and the battery lasts forever!",
+        comment: "Отличное качество звука для размера, и батарея длится вечно!",
         createdAt: "2023-04-05T13:27:00Z"
       }
     ],
@@ -354,8 +354,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Gaming Laptop",
-    description: "Dominate your games with this high-performance gaming laptop. Powered by the latest processor and dedicated graphics card, it handles even the most demanding titles with ease. The 15.6\" high-refresh-rate display delivers smooth, responsive gameplay, while the customizable RGB keyboard adds a touch of personal style. Advanced cooling technology keeps performance optimal during intense gaming sessions.",
+    name: "Игровой ноутбук",
+    description: "Доминируйте свои игры с этим высокопроизводительным игровым ноутбуком.Работающий на последнем процессоре и специальной видеокарте, она с легкостью обрабатывает даже самые требовательные названия.Дисплей с высоким уровнем высокого уровня 15,6 , обеспечивает плавный, отзывчивый игровой процесс, в то время как настраиваемая клавиатура RGB добавляет прикосновение личного стиля. Усовершенствованная технология охлаждения сохраняет производительность оптимальной во время интенсивных игровых сессий.",
     price: 1499.99,
     category: "electronics",
     images: [
@@ -370,7 +370,7 @@ export const products: Product[] = [
         userId: "user15",
         userName: "Riley Cooper",
         rating: 5,
-        comment: "This laptop is a beast! Runs all my games at max settings without breaking a sweat.",
+        comment: "Этот ноутбук - зверь!Запускает все мои игры в настройках Max, не напрягаясь",
         createdAt: "2023-03-14T17:55:00Z"
       }
     ],
@@ -379,8 +379,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Wireless Earbuds",
-    description: "Experience true wireless freedom with these premium earbuds. The advanced Bluetooth technology ensures a stable connection, while the custom-designed drivers deliver exceptional sound quality with deep bass and clear highs. Touch controls let you manage music and calls effortlessly, and the compact charging case provides up to 24 hours of total battery life.",
+    name: "Беспроводные наушники",
+    description: "Опыт истинную свободу беспроводной связи с этими наушниками премиум -класса.Усовершенствованная технология Bluetooth обеспечивает стабильное соединение, в то время как драйверы, разработанные на заказ, обеспечивают исключительное качество звука с глубокими басами и четкими максимумами.Контрольные элементы управления позволяют вам управлять музыкой и звонить без усилий, а корпус компактной зарядки обеспечивает до 24 часов общего времени автономной работы.",
     price: 129.99,
     discountPrice: 99.99,
     category: "electronics",
@@ -407,8 +407,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Smart Home Hub",
-    description: "Centralize your smart home control with this intuitive smart home hub. Connect and manage all your compatible devices—from lights and thermostats to security cameras and door locks—through one simple interface. Voice control capability lets you adjust your home environment hands-free, while customizable routines automate multiple actions with a single command.",
+    name: "Умный дом",
+    description: "Централизуйте свой умный управление домом с помощью этого интуитивно понятного концентратора умного дома.Подключите и управляйте всеми вашими совместимыми устройствами - от огней и термостатов к камерам безопасности и дверным замкам - через один простой интерфейс.Возможность голосового управления позволяет настроить домашнюю среду без рук, в то время как настраиваемые процедуры автоматизируют несколько действий с помощью одной команды.",
     price: 149.99,
     category: "electronics",
     images: [
@@ -423,7 +423,7 @@ export const products: Product[] = [
         userId: "user17",
         userName: "Morgan Brown",
         rating: 4,
-        comment: "Great hub that integrates well with most of my smart devices. The app is intuitive and reliable.",
+        comment: "Отличный центр, который хорошо интегрируется с большинством моих умных устройств.Приложение интуитивно понятно и надежно.",
         createdAt: "2023-02-28T14:15:00Z"
       }
     ],
@@ -435,7 +435,7 @@ export const products: Product[] = [
   // Footwear
   {
     id: uuidv4(),
-    name: "Classic Leather Sneakers",
+    name: "Классические кожаные кроссовки",
     description: "Elevate your casual style with these timeless leather sneakers. Crafted from premium full-grain leather, they combine sophisticated looks with all-day comfort. The cushioned insole and flexible rubber outsole provide excellent support, while the minimalist design ensures they pair effortlessly with virtually any outfit.",
     price: 89.99,
     category: "footwear",
@@ -451,7 +451,7 @@ export const products: Product[] = [
         userId: "user18",
         userName: "Alex Moore",
         rating: 5,
-        comment: "These sneakers are perfect! Comfortable right out of the box and they look great with everything.",
+        comment: "Эти кроссовки идеальны!Удобные прямо из коробки, и они отлично смотрятся со всем.",
         createdAt: "2023-04-22T11:18:00Z"
       }
     ],
@@ -463,8 +463,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Performance Running Shoes",
-    description: "Take your runs to the next level with these high-performance running shoes. The responsive cushioning technology provides excellent energy return, while the engineered mesh upper delivers breathable support where you need it most. The durable rubber outsole offers superior traction on various surfaces, and reflective details enhance visibility during low-light runs.",
+    name: "Высокоэффективные беговые кроссовки",
+    description: "Поднимите свои пробежки на новый уровень с этими высокоэффективными беговыми кроссовками. Отзывчивая амортизирующая технология обеспечивает отличное возвращение энергии, а инженерный сетчатый верх обеспечивает дышащую поддержку там, где она вам больше всего необходима. Прочная резиновая подошва обеспечивает превосходное сцепление на различных поверхностях, а светоотражающие детали улучшают видимость во время пробежек при слабом освещении.",
     price: 129.99,
     discountPrice: 109.99,
     category: "footwear",
@@ -480,7 +480,7 @@ export const products: Product[] = [
         userId: "user19",
         userName: "Jamie Lee",
         rating: 5,
-        comment: "Best running shoes I've ever owned! Great cushioning and support for long distances.",
+        comment: "Лучшие беговые кроссовки, которые у меня когда-либо были! Отличная амортизация и поддержка для длительных дистанций.",
         createdAt: "2023-03-15T16:42:00Z"
       }
     ],
@@ -492,8 +492,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Waterproof Hiking Boots",
-    description: "Conquer any trail with these rugged waterproof hiking boots. The full-grain leather and synthetic upper provides durability and protection, while the waterproof membrane keeps your feet dry through streams and rain. The aggressive lugged outsole delivers excellent traction on varied terrain, and the cushioned midsole ensures comfort during long days on the trail.",
+    name: "Водонепроницаемые походные ботинки",
+    description: "Покорите любую тропу с этими прочными водонепроницаемыми походными ботинками. Верх из натуральной кожи и синтетических материалов обеспечивает долговечность и защиту, а водонепроницаемая мембрана сохраняет ваши ноги сухими при переходе через ручьи и в дождь. Агрессивная рифленая подошва обеспечивает отличное сцепление на разнообразной местности, а амортизирующая средняя подошва гарантирует комфорт во время долгих дней на тропе.",
     price: 149.99,
     category: "footwear",
     images: [
@@ -508,7 +508,7 @@ export const products: Product[] = [
         userId: "user20",
         userName: "Taylor Smith",
         rating: 5,
-        comment: "These boots are incredible! Tackled a 15-mile hike in rainy conditions and my feet stayed completely dry.",
+        comment: "Эти ботинки невероятны! Преодолел 15-мильный поход в дождливых условиях, и мои ноги остались полностью сухими.",
         createdAt: "2023-05-10T09:27:00Z"
       }
     ],
@@ -519,8 +519,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Casual Canvas Slip-Ons",
-    description: "Add effortless style to your casual wardrobe with these comfortable canvas slip-on shoes. The lightweight construction and flexible outsole make them perfect for everyday wear, while the cushioned insole keeps your feet comfortable all day long. The classic design pairs easily with jeans, shorts, or casual trousers for a relaxed, put-together look.",
+    name: "Повседневные холщовые слипоны",
+    description: "Добавьте непринужденный стиль к своему повседневному гардеробу с этими удобными холщовыми слипонами. Легкая конструкция и гибкая подошва делают их идеальными для повседневной носки, а амортизированная стелька сохраняет ваши ноги комфортными в течение всего дня. Классический дизайн легко сочетается с джинсами, шортами или повседневными брюками для расслабленного, собранного образа.",
     price: 49.99,
     discountPrice: 39.99,
     category: "footwear",
@@ -536,7 +536,7 @@ export const products: Product[] = [
         userId: "user21",
         userName: "Riley Johnson",
         rating: 4,
-        comment: "Super comfortable and convenient. Great casual shoes for everyday wear.",
+        comment: "Супер удобные и практичные. Отличная повседневная обувь для ежедневной носки.",
         createdAt: "2023-06-05T13:19:00Z"
       }
     ],
@@ -547,8 +547,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Classic Leather Dress Shoes",
-    description: "Make a sophisticated statement with these timeless leather dress shoes. Crafted from premium calfskin with traditional construction methods, they offer exceptional quality and durability. The leather sole provides a refined finish, while the cushioned footbed ensures comfort during long days or special events. A versatile addition to any formal wardrobe.",
+    name: "Классические кожаные туфли",
+    description: "Создайте изысканный образ с этими неподвластными времени кожаными туфлями. Изготовленные из высококачественной телячьей кожи с использованием традиционных методов конструирования, они обладают исключительным качеством и долговечностью. Кожаная подошва обеспечивает изысканную отделку, а амортизированная стелька гарантирует комфорт во время длительных дней или особых событий. Универсальное дополнение к любому формальному гардеробу.",
     price: 179.99,
     category: "footwear",
     images: [
@@ -563,7 +563,7 @@ export const products: Product[] = [
         userId: "user22",
         userName: "Jordan Clark",
         rating: 5,
-        comment: "Exceptional quality and craftsmanship. These shoes are comfortable right out of the box and look impeccable.",
+        comment: "Исключительное качество и мастерство. Эти туфли удобны прямо из коробки и выглядят безупречно.",
         createdAt: "2023-04-18T15:33:00Z"
       }
     ],
@@ -574,8 +574,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Lightweight Training Shoes",
-    description: "Maximize your workout performance with these versatile training shoes. The lightweight, breathable upper keeps your feet cool during intense sessions, while the stable midsole provides excellent support for lifting and lateral movements. The durable rubber outsole delivers reliable traction for various exercise surfaces, making them perfect for everything from HIIT workouts to strength training.",
+    name: "Легкие тренировочные кроссовки",
+    description: "Максимизируйте эффективность тренировок с этими универсальными тренировочными кроссовками. Легкий дышащий верх сохраняет ваши ноги прохладными во время интенсивных тренировок, а стабильная средняя подошва обеспечивает отличную поддержку для подъема тяжестей и боковых движений. Прочная резиновая подошва обеспечивает надежное сцепление с различными поверхностями для упражнений, что делает их идеальными для всего: от высокоинтенсивных интервальных тренировок до силовых тренировок.",
     price: 99.99,
     category: "footwear",
     images: [
@@ -590,7 +590,7 @@ export const products: Product[] = [
         userId: "user23",
         userName: "Casey Taylor",
         rating: 5,
-        comment: "Great training shoes! Lightweight but supportive enough for various workouts.",
+        comment: "Отличные тренировочные кроссовки! Легкие, но достаточно поддерживающие для различных тренировок.",
         createdAt: "2023-02-22T10:15:00Z"
       }
     ],
@@ -602,8 +602,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Suede Chelsea Boots",
-    description: "Blend timeless style with modern comfort in these suede Chelsea boots. The sleek silhouette features elastic side panels for easy on-off, while the cushioned footbed ensures all-day comfort. The durable rubber sole provides reliable traction, and the versatile design pairs perfectly with both casual and smart-casual outfits for year-round wear.",
+    name: "Замшевые ботинки Челси",
+    description: "Сочетайте неподвластный времени стиль с современным комфортом в этих замшевых ботинках Челси. Элегантный силуэт с эластичными боковыми вставками для легкого надевания и снятия, а амортизированная стелька обеспечивает комфорт на весь день. Прочная резиновая подошва обеспечивает надежное сцепление, а универсальный дизайн идеально сочетается как с повседневными, так и с элегантными повседневными нарядами для круглогодичной носки.",
     price: 139.99,
     discountPrice: 119.99,
     category: "footwear",
@@ -619,7 +619,7 @@ export const products: Product[] = [
         userId: "user24",
         userName: "Morgan Ross",
         rating: 5,
-        comment: "These boots are absolute perfection! They look amazing and feel even better.",
+        comment: "Эти ботинки абсолютное совершенство! Они выглядят потрясающе и ощущаются еще лучше.",
         createdAt: "2023-03-30T14:22:00Z"
       }
     ],
@@ -630,8 +630,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Waterproof Sandals",
-    description: "Enjoy outdoor adventures with these versatile waterproof sandals. The quick-drying synthetic upper and adjustable straps provide a secure, customizable fit, while the cushioned EVA footbed delivers exceptional comfort for all-day wear. The rugged outsole offers excellent traction on wet and dry surfaces, making them perfect for hiking, beach outings, or water activities.",
+    name: "Водонепроницаемые сандалии",
+    description: "Наслаждайтесь приключениями на открытом воздухе с этими универсальными водонепроницаемыми сандалиями. Быстросохнущий синтетический верх и регулируемые ремешки обеспечивают надежную, индивидуальную посадку, а амортизированная стелька из EVA обеспечивает исключительный комфорт для ношения в течение всего дня. Прочная подошва обеспечивает отличное сцепление на мокрых и сухих поверхностях, что делает их идеальными для походов, пляжного отдыха или водных активностей.",
     price: 69.99,
     category: "footwear",
     images: [
@@ -646,7 +646,7 @@ export const products: Product[] = [
         userId: "user25",
         userName: "Alex Williams",
         rating: 4,
-        comment: "Great sandals for hiking and water activities! Comfortable and dry quickly.",
+        comment: "Отличные сандалии для походов и водных активностей! Удобные и быстро сохнут.",
         createdAt: "2023-06-18T11:45:00Z"
       }
     ],
@@ -659,8 +659,8 @@ export const products: Product[] = [
   // Cosmetics
   {
     id: uuidv4(),
-    name: "Hydrating Face Serum",
-    description: "Revitalize your skin with this powerful hydrating serum. Formulated with hyaluronic acid, vitamin C, and botanical extracts, it deeply moisturizes while brightening and evening skin tone. The lightweight, fast-absorbing formula penetrates quickly to deliver intense hydration without clogging pores, leaving your skin plump, radiant, and refreshed.",
+    name: "Увлажняющая сыворотка для лица",
+    description: "Оживите вашу кожу с помощью этой мощной увлажняющей сыворотки. Созданная с гиалуроновой кислотой, витамином С и растительными экстрактами, она глубоко увлажняет, одновременно осветляя и выравнивая тон кожи. Легкая, быстро впитывающаяся формула быстро проникает в кожу, обеспечивая интенсивное увлажнение без закупорки пор, оставляя вашу кожу упругой, сияющей и освеженной.",
     price: 49.99,
     category: "cosmetics",
     images: [
@@ -675,7 +675,7 @@ export const products: Product[] = [
         userId: "user26",
         userName: "Jamie Roberts",
         rating: 5,
-        comment: "This serum transformed my skin! It feels so hydrated and plump after just a week of use.",
+        comment: "Эта сыворотка преобразила мою кожу! Она такая увлажненная и упругая уже после недели использования.",
         createdAt: "2023-05-12T09:20:00Z"
       }
     ],
@@ -685,8 +685,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Long-Wear Matte Lipstick",
-    description: "Achieve bold, long-lasting lip color with this premium matte lipstick. The creamy formula glides on smoothly and sets to a comfortable matte finish that stays put for up to 12 hours without feathering or drying your lips. Infused with nourishing oils and vitamin E, it keeps your lips soft and conditioned while delivering intense, fade-resistant color.",
+    name: "Стойкая матовая помада",
+    description: "Достигните яркого, долговременного цвета губ с этой премиальной матовой помадой. Кремовая формула легко наносится и закрепляется для комфортного матового финиша, который держится до 12 часов без растекания или сушения губ. Обогащена питательными маслами и витамином Е, она сохраняет губы мягкими и ухоженными, обеспечивая интенсивный, устойчивый к выцветанию цвет.",
     price: 24.99,
     category: "cosmetics",
     images: [
@@ -701,7 +701,7 @@ export const products: Product[] = [
         userId: "user27",
         userName: "Taylor Kim",
         rating: 5,
-        comment: "Best lipstick I've ever used! The color is gorgeous and it really does last all day.",
+        comment: "Лучшая помада, которую я когда-либо использовала! Цвет великолепен, и она действительно держится весь день.",
         createdAt: "2023-04-30T15:48:00Z"
       }
     ],
@@ -711,8 +711,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Professional Makeup Brush Set",
-    description: "Elevate your makeup application with this comprehensive 15-piece brush set. Crafted with soft, cruelty-free synthetic bristles and sleek wooden handles, these professional-quality brushes blend products seamlessly for a flawless finish. The set includes everything from foundation and concealer brushes to detailed eye brushes, all presented in an elegant travel case.",
+    name: "Профессиональный набор кистей для макияжа",
+    description: "Улучшите нанесение макияжа с этим комплексным набором из 15 кистей. Изготовленные из мягкого, не тестированного на животных синтетического ворса и элегантных деревянных ручек, эти профессиональные кисти безупречно растушевывают продукты для безупречного финиша. Набор включает всё: от кистей для тонального крема и консилера до детальных кистей для глаз, представленных в элегантном дорожном футляре.",
     price: 59.99,
     discountPrice: 49.99,
     category: "cosmetics",
@@ -728,7 +728,7 @@ export const products: Product[] = [
         userId: "user28",
         userName: "Jordan Peterson",
         rating: 5,
-        comment: "Amazing brush set! The quality is comparable to much more expensive brands I've tried.",
+        comment: "Потрясающий набор кистей! Качество сравнимо с гораздо более дорогими брендами, которые я пробовала.",
         createdAt: "2023-03-25T12:34:00Z"
       }
     ],
@@ -738,8 +738,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Natural Clay Face Mask",
-    description: "Detoxify and purify your skin with this natural clay face mask. Formulated with kaolin and bentonite clays, it draws out impurities and excess oil while botanical extracts calm and nourish the skin. Regular use helps minimize the appearance of pores, control shine, and improve overall skin texture for a clearer, more refined complexion.",
+    name: "Натуральная глиняная маска для лица",
+    description: "Детоксифицируйте и очистите вашу кожу с этой натуральной глиняной маской для лица. Разработанная с каолином и бентонитовой глиной, она вытягивает загрязнения и избыток масла, в то время как растительные экстракты успокаивают и питают кожу. Регулярное использование помогает минимизировать появление пор, контролировать жирность и улучшать общую текстуру кожи для более чистого, утонченного цвета лица.",
     price: 34.99,
     category: "cosmetics",
     images: [
@@ -754,7 +754,7 @@ export const products: Product[] = [
         userId: "user29",
         userName: "Casey Garcia",
         rating: 5,
-        comment: "This mask has completely changed my oily/combination skin! My pores look smaller and breakouts are much less frequent.",
+        comment: "Эта маска полностью изменила мою жирную/комбинированную кожу! Мои поры выглядят меньше, и высыпания гораздо реже.",
         createdAt: "2023-02-14T18:55:00Z"
       }
     ],
@@ -763,8 +763,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Volumizing Mascara",
-    description: "Achieve dramatic, voluminous lashes with this premium mascara. The innovative brush separates and coats each lash from root to tip, while the buildable formula adds exceptional volume and length without clumping or flaking. The long-wearing, smudge-proof formula stays put all day while nourishing ingredients condition your lashes.",
+    name: "Объемная тушь для ресниц",
+    description: "Достигните драматичных, объемных ресниц с этой премиальной тушью. Инновационная щеточка разделяет и покрывает каждую ресницу от корня до кончика, а наращиваемая формула добавляет исключительный объем и длину без комков или осыпания. Долговечная, устойчивая к смазыванию формула держится весь день, а питательные ингредиенты ухаживают за вашими ресницами.",
     price: 22.99,
     discountPrice: 19.99,
     category: "cosmetics",
@@ -780,7 +780,7 @@ export const products: Product[] = [
         userId: "user30",
         userName: "Riley Barnes",
         rating: 5,
-        comment: "This mascara is incredible! It gives me the volume and length I want without any clumping.",
+        comment: "Эта тушь просто невероятна! Она дает мне желаемый объем и длину без комкования.",
         createdAt: "2023-05-28T10:12:00Z"
       }
     ],
@@ -790,8 +790,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Age-Defying Night Cream",
-    description: "Rejuvenate your skin overnight with this luxurious age-defying night cream. Formulated with retinol, peptides, and antioxidant-rich botanical extracts, it works while you sleep to reduce the appearance of fine lines and wrinkles, improve elasticity, and even skin tone. The rich, nourishing texture deeply hydrates without feeling heavy, leaving your skin looking refreshed and youthful by morning.",
+    name: "Омолаживающий ночной крем",
+    description: "Омолодите свою кожу за ночь с этим роскошным омолаживающим ночным кремом. Созданный с ретинолом, пептидами и богатыми антиоксидантами растительными экстрактами, он работает пока вы спите, чтобы уменьшить появление тонких линий и морщин, улучшить эластичность и выровнять тон кожи. Богатая, питательная текстура глубоко увлажняет, не ощущаясь тяжело, оставляя вашу кожу выглядящей свежей и молодой к утру.",
     price: 64.99,
     category: "cosmetics",
     images: [
@@ -806,7 +806,7 @@ export const products: Product[] = [
         userId: "user31",
         userName: "Morgan Wilson",
         rating: 5,
-        comment: "This cream has made a noticeable difference in my skin's texture and firmness. Well worth the price!",
+        comment: "Этот крем сделал заметную разницу в текстуре и упругости моей кожи. Определенно стоит своей цены!",
         createdAt: "2023-04-10T19:27:00Z"
       }
     ],
@@ -816,8 +816,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Mineral Foundation Powder",
-    description: "Achieve a flawless complexion with this gentle mineral foundation powder. The lightweight, buildable formula provides natural-looking coverage while letting your skin breathe. Made with pure minerals and free from talc, parabens, and synthetic fragrances, it's perfect for sensitive and acne-prone skin. The long-wearing formula controls shine and stays fresh all day.",
+    name: "Минеральная тональная пудра",
+    description: "Достигните безупречного цвета лица с этой нежной минеральной тональной пудрой. Легкая, наращиваемая формула обеспечивает естественное покрытие, позволяя коже дышать. Сделана из чистых минералов и не содержит талька, парабенов и синтетических ароматов, она идеальна для чувствительной и склонной к акне кожи. Долговечная формула контролирует жирный блеск и сохраняет свежесть в течение всего дня.",
     price: 39.99,
     category: "cosmetics",
     images: [
@@ -832,7 +832,7 @@ export const products: Product[] = [
         userId: "user32",
         userName: "Alex Turner",
         rating: 5,
-        comment: "Finally found a foundation that doesn't irritate my sensitive skin! Coverage is buildable and looks very natural.",
+        comment: "Наконец нашла тональное средство, которое не раздражает мою чувствительную кожу! Покрытие можно наращивать и выглядит очень естественно.",
         createdAt: "2023-03-18T11:40:00Z"
       }
     ],
@@ -843,8 +843,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Exfoliating Facial Scrub",
-    description: "Reveal smoother, brighter skin with this gentle exfoliating facial scrub. Fine bamboo particles and fruit enzymes work together to remove dead skin cells and unclog pores without harsh abrasives. Aloe vera and chamomile soothe and hydrate, leaving your skin refreshed, soft, and glowing. Suitable for all skin types when used 2-3 times weekly.",
+    name: "Отшелушивающий скраб для лица",
+    description: "Откройте более гладкую, яркую кожу с этим мягким отшелушивающим скрабом для лица. Тонкие частицы бамбука и фруктовые энзимы работают вместе, чтобы удалить омертвевшие клетки кожи и очистить поры без агрессивных абразивов. Алоэ вера и ромашка успокаивают и увлажняют, оставляя вашу кожу освеженной, мягкой и сияющей. Подходит для всех типов кожи при использовании 2-3 раза в неделю.",
     price: 29.99,
     category: "cosmetics",
     images: [
@@ -859,7 +859,7 @@ export const products: Product[] = [
         userId: "user33",
         userName: "Jamie Lee",
         rating: 4,
-        comment: "Love this scrub! It's gentle but effective, and my skin feels amazingly soft after using it.",
+        comment: "Обожаю этот скраб! Он мягкий, но эффективный, и моя кожа ощущается удивительно мягкой после его использования.",
         createdAt: "2023-06-02T14:32:00Z"
       }
     ],
@@ -870,8 +870,8 @@ export const products: Product[] = [
   // Accessories
   {
     id: uuidv4(),
-    name: "Classic Leather Watch",
-    description: "Elevate your style with this timeless leather watch. The premium stainless steel case houses a precise quartz movement, while the genuine leather strap adds sophisticated comfort. The minimalist dial features luminous hands and markers for easy readability in all conditions. Water-resistant to 50 meters, it transitions seamlessly from business meetings to weekend outings.",
+    name: "Классические кожаные часы",
+    description: "Подчеркните свой стиль этими неподвластными времени кожаными часами. Высококачественный корпус из нержавеющей стали вмещает точный кварцевый механизм, а ремешок из натуральной кожи добавляет изысканный комфорт. Минималистичный циферблат оснащен люминесцентными стрелками и маркерами для легкой читаемости в любых условиях. Водонепроницаемость до 50 метров, они безупречно переходят от деловых встреч к выходным прогулкам.",
     price: 149.99,
     discountPrice: 129.99,
     category: "accessories",
@@ -887,7 +887,7 @@ export const products: Product[] = [
         userId: "user34",
         userName: "Taylor Black",
         rating: 5,
-        comment: "Impeccable craftsmanship and timeless design. Extremely satisfied with this purchase!",
+        comment: "Безупречное качество изготовления и неподвластный времени дизайн. Чрезвычайно доволен этой покупкой!",
         createdAt: "2023-04-15T10:27:00Z"
       }
     ],
@@ -898,8 +898,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Polarized Sunglasses",
-    description: "Protect your eyes in style with these premium polarized sunglasses. The lightweight yet durable frame offers all-day comfort, while polarized lenses reduce glare and provide 100% UV protection. The timeless design complements any face shape and outfit, making them a versatile addition to your accessory collection.",
+    name: "Поляризованные солнцезащитные очки",
+    description: "Защитите свои глаза стильно с этими премиальными поляризованными солнцезащитными очками. Легкая, но прочная оправа обеспечивает комфорт на весь день, а поляризованные линзы уменьшают блики и обеспечивают 100% защиту от УФ-лучей. Вневременной дизайн дополняет любую форму лица и наряд, делая их универсальным дополнением к вашей коллекции аксессуаров.",
     price: 89.99,
     category: "accessories",
     images: [
@@ -914,7 +914,7 @@ export const products: Product[] = [
         userId: "user35",
         userName: "Jordan Miller",
         rating: 5,
-        comment: "Amazing quality! The polarization makes a huge difference when driving or near water.",
+        comment: "Потрясающее качество! Поляризация действительно имеет огромное значение при вождении или вблизи воды.",
         createdAt: "2023-05-20T16:45:00Z"
       }
     ],
@@ -925,8 +925,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Genuine Leather Wallet",
-    description: "Organize your essentials with this premium leather wallet. Crafted from full-grain leather that develops a beautiful patina with use, it features multiple card slots, bill compartments, and an ID window for maximum functionality. The slim profile fits comfortably in your pocket while still providing ample storage for your daily needs.",
+    name: "Кошелек из натуральной кожи",
+    description: "Организуйте свои незаменимые вещи с этим премиальным кожаным кошельком. Изготовленный из кожи высшего качества, которая со временем приобретает красивую патину, он имеет несколько отделений для карт, отделений для купюр и окошко для ID-карты для максимальной функциональности. Тонкий профиль удобно помещается в кармане, при этом обеспечивая достаточное пространство для ваших ежедневных потребностей.",
     price: 59.99,
     category: "accessories",
     images: [
@@ -941,7 +941,7 @@ export const products: Product[] = [
         userId: "user36",
         userName: "Casey Thompson",
         rating: 5,
-        comment: "Exceptional quality. The leather is soft yet durable and the craftsmanship is top-notch.",
+        comment: "Исключительное качество. Кожа мягкая, но прочная, а качество изготовления - высшего класса.",
         createdAt: "2023-03-12T11:18:00Z"
       }
     ],
@@ -951,8 +951,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Minimalist Silver Jewelry Set",
-    description: "Add a touch of elegance to any outfit with this minimalist silver jewelry set. Including a pendant necklace, stud earrings, and a delicate bracelet, each piece is crafted from sterling silver with a high-polish finish. The simple yet sophisticated design works beautifully for both everyday wear and special occasions.",
+    name: "Минималистичный серебряный ювелирный набор",
+    description: "Добавьте элегантности к любому наряду с этим минималистичным серебряным ювелирным набором. Включающий в себя кулон-подвеску, серьги-гвоздики и изящный браслет, каждый элемент изготовлен из стерлингового серебра с высокополированной отделкой. Простой, но изысканный дизайн прекрасно подходит как для повседневной носки, так и для особых случаев.",
     price: 79.99,
     discountPrice: 69.99,
     category: "accessories",
@@ -968,7 +968,7 @@ export const products: Product[] = [
         userId: "user37",
         userName: "Riley Evans",
         rating: 5,
-        comment: "This set is absolutely beautiful! The pieces are delicate yet well-made and go with everything.",
+        comment: "Этот набор просто великолепен! Элементы изящные, но хорошо сделанные и сочетаются со всем.",
         createdAt: "2023-05-08T14:22:00Z"
       }
     ],
@@ -978,8 +978,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Leather Crossbody Bag",
-    description: "Combine style and practicality with this versatile leather crossbody bag. The premium full-grain leather exterior offers durability and develops a unique patina over time, while the adjustable strap allows for comfortable wear. The thoughtfully designed interior features multiple pockets to keep your essentials organized, and the compact size makes it perfect for everyday use.",
+    name: "Кожаная сумка через плечо",
+    description: "Сочетайте стиль и практичность с этой универсальной кожаной сумкой через плечо. Премиальная внешняя отделка из кожи высшего качества обеспечивает долговечность и со временем приобретает уникальную патину, а регулируемый ремень позволяет носить её с комфортом. Продуманный внутренний дизайн с несколькими карманами позволяет держать все необходимые вещи в порядке, а компактный размер делает её идеальной для ежедневного использования.",
     price: 119.99,
     category: "accessories",
     images: [
@@ -994,7 +994,7 @@ export const products: Product[] = [
         userId: "user38",
         userName: "Morgan Chen",
         rating: 5,
-        comment: "This bag is absolutely perfect! The leather is beautiful, and it's the ideal size for daily essentials.",
+        comment: "Эта сумка просто идеальна! Кожа прекрасна, и она идеального размера для повседневных вещей.",
         createdAt: "2023-02-18T09:33:00Z"
       }
     ],
@@ -1004,8 +1004,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Knitted Winter Beanie",
-    description: "Stay warm and stylish during cold weather with this premium knitted beanie. Made from a soft, insulating wool blend, it provides exceptional warmth while remaining breathable. The classic ribbed design offers a universal fit and timeless appeal, making it a winter wardrobe essential that complements any cold-weather outfit.",
+    name: "Вязаная зимняя шапка",
+    description: "Оставайтесь в тепле и стиле в холодную погоду с этой премиальной вязаной шапкой. Изготовленная из мягкой, утепляющей шерстяной смеси, она обеспечивает исключительное тепло, оставаясь при этом воздухопроницаемой. Классический рельефный дизайн обеспечивает универсальную посадку и вневременную привлекательность, что делает её неотъемлемой частью зимнего гардероба, дополняющей любой зимний наряд.",
     price: 29.99,
     discountPrice: 24.99,
     category: "accessories",
@@ -1021,7 +1021,7 @@ export const products: Product[] = [
         userId: "user39",
         userName: "Alex Rivera",
         rating: 5,
-        comment: "Incredibly soft and warm! This has become my go-to beanie for winter.",
+        comment: "Невероятно мягкая и теплая! Она стала моей любимой шапкой для зимы.",
         createdAt: "2023-01-25T15:46:00Z"
       }
     ],
@@ -1031,8 +1031,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Genuine Leather Belt",
-    description: "Complete your look with this classic leather belt. Crafted from full-grain leather that improves with age, it features a timeless design with a durable buckle that stands up to daily wear. The versatile style works equally well with jeans or dress pants, making it an essential addition to any wardrobe.",
+    name: "Ремень из натуральной кожи",
+    description: "Завершите свой образ этим классическим кожаным ремнем. Изготовленный из кожи высшего качества, которая становится лучше с возрастом, он обладает вневременным дизайном с прочной пряжкой, выдерживающей ежедневную носку. Универсальный стиль одинаково хорошо сочетается как с джинсами, так и с брюками, делая его необходимым дополнением к любому гардеробу.",
     price: 44.99,
     category: "accessories",
     images: [
@@ -1047,7 +1047,7 @@ export const products: Product[] = [
         userId: "user40",
         userName: "Jamie Wilson",
         rating: 5,
-        comment: "Excellent quality belt that looks much more expensive than it is. Very pleased with this purchase.",
+        comment: "Отличный качественный ремень, который выглядит гораздо дороже своей цены. Очень доволен этой покупкой.",
         createdAt: "2023-04-03T12:18:00Z"
       }
     ],
@@ -1058,8 +1058,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "100% Silk Neck Scarf",
-    description: "Add a touch of luxury to any outfit with this versatile silk scarf. Made from 100% premium mulberry silk, it drapes beautifully and feels incredibly soft against your skin. The vibrant print adds a pop of color and interest to both casual and formal looks, while the generous size allows for multiple styling options year-round.",
+    name: "Шейный платок из 100% шелка",
+    description: "Добавьте нотку роскоши к любому наряду с этим универсальным шелковым платком. Изготовленный из 100% высококачественного тутового шелка, он красиво драпируется и ощущается невероятно мягким на коже. Яркий принт добавляет всплеск цвета и интереса как к повседневным, так и к формальным образам, а щедрый размер позволяет создавать множество вариантов стилизации в течение всего года.",
     price: 49.99,
     category: "accessories",
     images: [
@@ -1074,7 +1074,7 @@ export const products: Product[] = [
         userId: "user41",
         userName: "Taylor Martinez",
         rating: 5,
-        comment: "This scarf is absolutely gorgeous! The silk is luxurious and the colors are even more vibrant in person.",
+        comment: "Этот платок абсолютно великолепен! Шелк роскошный, а цвета даже ярче, чем на фото.",
         createdAt: "2023-06-12T10:33:00Z"
       }
     ],
@@ -1083,17 +1083,17 @@ export const products: Product[] = [
     tags: ["scarf", "silk", "accessories", "luxury"]
   },
   
-  // Furniture
+  // Мебель
   {
     id: uuidv4(),
-    name: "Mid-Century Modern Sofa",
-    description: "Bring timeless style to your living space with this mid-century modern sofa. The clean lines and tapered legs create a classic silhouette, while the comfortable cushioning provides exceptional support for lounging. Upholstered in durable, stain-resistant fabric, it combines retro-inspired design with practical functionality for today's homes.",
+    name: "Современный диван",
+    description: "Привнесите вечный стиль в свое жилое пространство с этим современным диваном в стиле середины века. Чистые линии и конические ножки создают классический силуэт, в то время как удобная набивка обеспечивает исключительную поддержку для отдыха. Обитый прочной, устойчивой к пятнам тканью, он сочетает в себе ретро-стиль с практической функциональностью для современных домов.",
     price: 899.99,
     discountPrice: 799.99,
     category: "furniture",
     images: [
-      "https://images.pexels.com/photos/5998297/pexels-photo-5998297.jpeg",
-      "https://images.pexels.com/photos/4916510/pexels-photo-4916510.jpeg"
+      "https://images.pexels.com/photos/28576394/pexels-photo-28576394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/31847006/pexels-photo-31847006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     ],
     brand: "ModernHome",
     rating: 4.7,
@@ -1103,7 +1103,7 @@ export const products: Product[] = [
         userId: "user42",
         userName: "Jordan Lee",
         rating: 5,
-        comment: "This sofa is absolutely perfect! The quality is outstanding and it looks exactly as pictured.",
+        comment: "Этот диван абсолютно идеален! Качество выдающееся, и он выглядит именно так, как на фото.",
         createdAt: "2023-04-25T14:18:00Z"
       }
     ],
@@ -1114,8 +1114,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Scandinavian Dining Table",
-    description: "Create a welcoming dining space with this elegant Scandinavian-inspired table. The solid oak construction ensures exceptional durability, while the natural finish highlights the beautiful wood grain. The minimalist design features gently splayed legs and a smooth tabletop, creating a timeless piece that complements a variety of interior styles.",
+    name: "Скандинавский обеденный стол",
+    description: "Создайте уютное обеденное пространство с этим элегантным столом в скандинавском стиле. Конструкция из массива дуба обеспечивает исключительную долговечность, а естественная отделка подчеркивает красивую текстуру дерева. Минималистичный дизайн с мягко расширяющимися ножками и гладкой столешницей создает вневременное изделие, которое дополняет различные стили интерьера.",
     price: 649.99,
     category: "furniture",
     images: [
@@ -1130,7 +1130,7 @@ export const products: Product[] = [
         userId: "user43",
         userName: "Casey Johnson",
         rating: 5,
-        comment: "Absolutely stunning table! The craftsmanship is excellent and it's even more beautiful in person.",
+        comment: "Потрясающе великолепный стол! Мастерство изготовления превосходное, и он еще красивее вживую.",
         createdAt: "2023-03-18T09:33:00Z"
       }
     ],
@@ -1140,8 +1140,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Ergonomic Office Chair",
-    description: "Enhance your work-from-home setup with this premium ergonomic office chair. The adjustable height, lumbar support, and tilting mechanism allow you to find your perfect sitting position, while the breathable mesh backrest keeps you cool during long work sessions. The durable construction and smooth-rolling castors ensure years of comfortable use.",
+    name: "Эргономичное офисное кресло",
+    description: "Улучшите свою домашнюю рабочую обстановку с этим премиальным эргономичным офисным креслом. Регулируемая высота, поясничная поддержка и механизм наклона позволяют найти идеальное положение для сидения, а дышащая сетчатая спинка сохраняет прохладу во время длительных рабочих сессий. Прочная конструкция и плавно катящиеся колесики обеспечивают годы комфортного использования.",
     price: 299.99,
     discountPrice: 249.99,
     category: "furniture",
@@ -1157,7 +1157,7 @@ export const products: Product[] = [
         userId: "user44",
         userName: "Riley Thompson",
         rating: 5,
-        comment: "Game-changer for my home office! My back pain has significantly decreased since getting this chair.",
+        comment: "Игра-изменитель для моего домашнего офиса! Моя боль в спине значительно уменьшилась с тех пор, как я приобрел это кресло.",
         createdAt: "2023-05-10T16:45:00Z"
       }
     ],
@@ -1167,8 +1167,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Solid Wood Bookshelf",
-    description: "Display your books and treasured items with this beautiful solid wood bookshelf. The sturdy construction ensures stability, while the natural wood finish adds warmth to any room. Five spacious shelves provide ample storage space, and the timeless design blends seamlessly with various interior styles from traditional to contemporary.",
+    name: "Книжный шкаф из массива дерева",
+    description: "Демонстрируйте свои книги и ценные предметы с этим красивым книжным шкафом из массива дерева. Прочная конструкция обеспечивает стабильность, а натуральная деревянная отделка добавляет тепла любой комнате. Пять просторных полок предоставляют достаточно места для хранения, а вневременной дизайн гармонично сочетается с различными стилями интерьера от традиционного до современного.",
     price: 399.99,
     category: "furniture",
     images: [
@@ -1183,7 +1183,7 @@ export const products: Product[] = [
         userId: "user45",
         userName: "Morgan Smith",
         rating: 5,
-        comment: "This bookshelf is absolutely gorgeous! The wood quality is excellent and assembly was straightforward.",
+        comment: "Этот книжный шкаф абсолютно великолепен! Качество дерева отличное, а сборка была простой.",
         createdAt: "2023-02-20T13:22:00Z"
       }
     ],
@@ -1193,8 +1193,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Queen Size Platform Bed",
-    description: "Transform your bedroom with this stylish and functional platform bed. The solid wood frame provides exceptional support for your mattress without the need for a box spring, while the upholstered headboard creates a comfortable backrest for reading in bed. The minimalist design and clean lines work beautifully in contemporary bedroom settings.",
+    name: "Платформенная кровать размера Queen",
+    description: "Преобразите свою спальню с этой стильной и функциональной платформенной кроватью. Рама из массива дерева обеспечивает исключительную поддержку для вашего матраса без необходимости в пружинном блоке, а мягкое изголовье создает удобную спинку для чтения в постели. Минималистичный дизайн и четкие линии прекрасно смотрятся в современной обстановке спальни.",
     price: 749.99,
     discountPrice: 649.99,
     category: "furniture",
@@ -1210,7 +1210,7 @@ export const products: Product[] = [
         userId: "user46",
         userName: "Jamie Anderson",
         rating: 5,
-        comment: "Love this bed frame! It's sturdy, beautiful, and the upholstered headboard is very comfortable to lean against.",
+        comment: "Обожаю эту кровать! Она прочная, красивая, а мягкое изголовье очень удобно для опоры.",
         createdAt: "2023-04-08T14:55:00Z"
       }
     ],
@@ -1222,8 +1222,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Glass Top Coffee Table",
-    description: "Add a touch of elegance to your living room with this contemporary glass top coffee table. The tempered glass surface creates a sense of openness while showcasing the sleek metal frame below. The minimalist design combines form and function, providing a stylish yet practical surface for drinks, books, and decorative items.",
+    name: "Журнальный столик со стеклянной столешницей",
+    description: "Добавьте нотку элегантности в вашу гостиную с этим современным журнальным столиком со стеклянной столешницей. Поверхность из закаленного стекла создает ощущение открытости, одновременно демонстрируя изящную металлическую раму под ней. Минималистичный дизайн сочетает форму и функциональность, обеспечивая стильную, но практичную поверхность для напитков, книг и декоративных предметов.",
     price: 249.99,
     category: "furniture",
     images: [
@@ -1238,7 +1238,7 @@ export const products: Product[] = [
         userId: "user47",
         userName: "Alex Morgan",
         rating: 4,
-        comment: "Beautiful table that looks more expensive than it is. Easy to assemble and very sturdy.",
+        comment: "Красивый стол, который выглядит дороже, чем стоит. Легко собирается и очень прочный.",
         createdAt: "2023-06-02T11:18:00Z"
       }
     ],
@@ -1248,8 +1248,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Storage Ottoman",
-    description: "Maximize your space with this versatile storage ottoman. The padded top provides comfortable extra seating or a place to rest your feet, while the hinged lid reveals generous storage space for blankets, pillows, or other items. The durable upholstery and solid construction ensure this practical piece will serve your home for years to come.",
+    name: "Пуф с отделением для хранения",
+    description: "Максимально используйте свое пространство с этим универсальным пуфом для хранения. Мягкий верх обеспечивает удобное дополнительное сиденье или место для отдыха ног, а открывающаяся крышка открывает просторное место для хранения одеял, подушек или других предметов. Прочная обивка и надежная конструкция гарантируют, что этот практичный предмет будет служить вашему дому долгие годы.",
     price: 129.99,
     discountPrice: 109.99,
     category: "furniture",
@@ -1265,7 +1265,7 @@ export const products: Product[] = [
         userId: "user48",
         userName: "Taylor Wilson",
         rating: 5,
-        comment: "Perfect addition to my living room! It's sturdy enough to sit on and holds all my throw blankets.",
+        comment: "Идеальное дополнение к моей гостиной! Он достаточно прочный, чтобы на нем сидеть, и вмещает все мои пледы.",
         createdAt: "2023-03-15T17:40:00Z"
       }
     ],
@@ -1275,8 +1275,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Adjustable Standing Desk",
-    description: "Improve your work environment with this premium adjustable standing desk. The electric height adjustment system smoothly transitions between sitting and standing positions at the touch of a button, allowing you to vary your posture throughout the day. The spacious desktop provides ample room for your computer setup and work materials, while the sturdy frame ensures stability at any height.",
+    name: "Регулируемый стоячий стол",
+    description: "Улучшите свою рабочую среду с этим премиальным регулируемым стоячим столом. Электрическая система регулировки высоты плавно переходит между положениями сидя и стоя одним нажатием кнопки, позволяя вам менять позу в течение дня. Просторная столешница предоставляет достаточно места для вашего компьютера и рабочих материалов, а прочная рама обеспечивает стабильность на любой высоте.",
     price: 499.99,
     category: "furniture",
     images: [
@@ -1291,7 +1291,7 @@ export const products: Product[] = [
         userId: "user49",
         userName: "Jordan Taylor",
         rating: 5,
-        comment: "This desk has transformed my work-from-home experience! The adjustment is smooth and quiet, and the quality is excellent.",
+        comment: "Этот стол преобразил мой опыт работы из дома! Регулировка плавная и тихая, а качество превосходное.",
         createdAt: "2023-05-30T09:27:00Z"
       }
     ],
@@ -1303,8 +1303,8 @@ export const products: Product[] = [
   // Books
   {
     id: uuidv4(),
-    name: "The Midnight Library",
-    description: "Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices... Would you have done anything different, if you had the chance to undo your regrets? A dazzling novel about all the choices that go into a life well lived.",
+    name: "Полночная библиотека",
+    description: "Между жизнью и смертью существует библиотека, и в этой библиотеке полки продолжаются бесконечно. Каждая книга дает шанс прожить другую жизнь, которую вы могли бы иметь. Увидеть, как сложились бы вещи, если бы вы сделали другой выбор... Сделали бы вы что-нибудь иначе, если бы у вас был шанс исправить свои сожаления? Ослепительный роман обо всех выборах, которые складываются в хорошо прожитую жизнь.",
     price: 24.99,
     discountPrice: 19.99,
     category: "books",
@@ -1320,7 +1320,7 @@ export const products: Product[] = [
         userId: "user50",
         userName: "Casey Adams",
         rating: 5,
-        comment: "One of the most beautiful, thought-provoking books I've ever read. Couldn't put it down!",
+        comment: "Одна из самых красивых, заставляющих задуматься книг, которые я когда-либо читал. Не мог оторваться!",
         createdAt: "2023-04-18T15:33:00Z"
       }
     ],
@@ -1330,8 +1330,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Atomic Habits",
-    description: "No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results. This breakthrough book reveals how small changes can yield massive transformation.",
+    name: "Атомные привычки",
+    description: "Независимо от ваших целей, 'Атомные привычки' предлагает проверенную систему для улучшения каждый день. Джеймс Клир, один из ведущих мировых экспертов по формированию привычек, раскрывает практические стратегии, которые научат вас точно, как формировать хорошие привычки, избавляться от плохих и осваивать крошечные поведенческие изменения, ведущие к поразительным результатам. Эта прорывная книга раскрывает, как небольшие изменения могут привести к массовым преобразованиям.",
     price: 27.99,
     category: "books",
     images: [
@@ -1346,7 +1346,7 @@ export const products: Product[] = [
         userId: "user51",
         userName: "Morgan Williams",
         rating: 5,
-        comment: "Life-changing book with actionable advice that actually works. I've recommended it to everyone I know!",
+        comment: "Книга, меняющая жизнь, с практическими советами, которые действительно работают. Я рекомендовал её всем, кого знаю!",
         createdAt: "2023-03-10T09:27:00Z"
       }
     ],
@@ -1356,8 +1356,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Project Hail Mary",
-    description: "Ryland Grace is the sole survivor on a desperate, last-chance mission—and if he fails, humanity and the earth itself will perish. Except that right now, he doesn't know that. He can't even remember his own name, let alone the nature of his assignment or how to complete it. All he knows is that he's been asleep for a very, very long time. And he's just been awakened to find himself millions of miles from home, with nothing but two corpses for company.",
+    name: "Проект 'Аве Мария'",
+    description: "Райланд Грейс - единственный выживший в отчаянной миссии последнего шанса, и если он потерпит неудачу, человечество и сама Земля погибнут. Только вот сейчас он этого не знает. Он даже не может вспомнить своё собственное имя, не говоря уже о характере своего задания или о том, как его выполнить. Всё, что он знает, - это то, что он очень, очень долго спал. И его только что разбудили, чтобы обнаружить себя в миллионах миль от дома, без ничего, кроме двух трупов в качестве компании.",
     price: 28.99,
     discountPrice: 24.99,
     category: "books",
@@ -1373,7 +1373,7 @@ export const products: Product[] = [
         userId: "user52",
         userName: "Jamie Zhang",
         rating: 5,
-        comment: "Even better than The Martian! The perfect blend of science, humor, and heart-pounding suspense.",
+        comment: "Даже лучше, чем 'Марсианин'! Идеальное сочетание науки, юмора и захватывающего дух напряжения.",
         createdAt: "2023-05-22T16:45:00Z"
       }
     ],
@@ -1382,8 +1382,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "The Psychology of Money",
-    description: "Doing well with money isn't necessarily about what you know. It's about how you behave. And behavior is hard to teach, even to really smart people. In The Psychology of Money, award-winning author Morgan Housel shares 19 short stories exploring the strange ways people think about money and teaches you how to make better sense of one of life's most important topics.",
+    name: "Психология денег",
+    description: "Успех в обращении с деньгами не обязательно зависит от того, что вы знаете. Это зависит от того, как вы себя ведёте. А поведению трудно научить, даже очень умных людей. В 'Психологии денег' отмеченный наградами автор Морган Хаузел делится 19 короткими историями, исследующими странные способы мышления людей о деньгах, и учит вас лучше понимать одну из самых важных тем в жизни.",
     price: 19.99,
     category: "books",
     images: [
@@ -1398,7 +1398,7 @@ export const products: Product[] = [
         userId: "user53",
         userName: "Riley Johnson",
         rating: 5,
-        comment: "One of the best books on personal finance I've ever read. Clear, insightful, and practical advice for everyone.",
+        comment: "Одна из лучших книг о личных финансах, которые я когда-либо читал. Ясные, проницательные и практические советы для всех.",
         createdAt: "2023-02-14T09:18:00Z"
       }
     ],
@@ -1408,8 +1408,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "The Song of Achilles",
-    description: "Greece in the age of heroes. Patroclus, an awkward young prince, has been exiled to the court of King Peleus and his perfect son Achilles. By all rights, their paths should never cross, but Achilles takes the shamed prince as his friend, and as they grow into young men skilled in the arts of war and medicine, their bond blossoms into something deeper - despite the displeasure of Achilles' mother Thetis, a cruel sea goddess.",
+    name: "Песнь Ахилла",
+    description: "Греция в эпоху героев. Патрокл, неловкий молодой принц, был изгнан ко двору царя Пелея и его совершенного сына Ахилла. По всем правилам их пути никогда не должны были пересечься, но Ахилл берёт опозоренного принца в друзья, и когда они растут и становятся молодыми людьми, искусными в военном деле и медицине, их связь расцветает во что-то более глубокое - несмотря на недовольство матери Ахилла Фетиды, жестокой морской богини.",
     price: 16.99,
     discountPrice: 14.99,
     category: "books",
@@ -1425,7 +1425,7 @@ export const products: Product[] = [
         userId: "user54",
         userName: "Alex Rivera",
         rating: 5,
-        comment: "Absolutely stunning retelling of the Iliad. The prose is beautiful and the story is both heartbreaking and captivating.",
+        comment: "Абсолютно потрясающий пересказ Илиады. Проза прекрасна, а история одновременно душераздирающая и захватывающая.",
         createdAt: "2023-05-25T16:40:00Z"
       }
     ],
@@ -1434,8 +1434,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Where the Crawdads Sing",
-    description: "For years, rumors of the 'Marsh Girl' have haunted Barkley Cove, a quiet town on the North Carolina coast. So in late 1969, when handsome Chase Andrews is found dead, the locals immediately suspect Kya Clark, the so-called Marsh Girl. But Kya is not what they say. Sensitive and intelligent, she has survived for years alone in the marsh that she calls home, finding friends in the gulls and lessons in the sand.",
+    name: "Туда, где раки поют",
+    description: "В течение многих лет слухи о 'Болотной девочке' преследуют Баркли-Коув, тихий городок на побережье Северной Каролины. Поэтому в конце 1969 года, когда красавец Чейз Эндрюс найден мёртвым, местные жители сразу подозревают Кию Кларк, так называемую Болотную девочку. Но Кия не такая, как о ней говорят. Чувствительная и умная, она годами выживала одна на болоте, которое называет своим домом, находя друзей в чайках и уроки в песке.",
     price: 18.99,
     category: "books",
     images: [
@@ -1450,7 +1450,7 @@ export const products: Product[] = [
         userId: "user55",
         userName: "Jordan Taylor",
         rating: 5,
-        comment: "A beautifully written story that completely transported me to the North Carolina marshes. Couldn't put it down!",
+        comment: "Прекрасно написанная история, которая полностью перенесла меня на болота Северной Каролины. Не мог оторваться!",
         createdAt: "2023-03-30T14:22:00Z"
       }
     ],
@@ -1460,8 +1460,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "Educated: A Memoir",
-    description: "Born to survivalists in the mountains of Idaho, Tara Westover was seventeen the first time she set foot in a classroom. Her family was so isolated from mainstream society that there was no one to ensure the children received an education, and no one to intervene when one of her older brothers became violent. When another brother got himself into college, Tara decided to try a new kind of life. Her quest for knowledge transformed her, taking her over oceans and across continents, to Harvard and to Cambridge University.",
+    name: "Образованная: Мемуары",
+    description: "Рождённая в семье выживальщиков в горах Айдахо, Тара Вестовер было семнадцать, когда она впервые переступила порог класса. Её семья была настолько изолирована от основного общества, что никто не следил за тем, чтобы дети получали образование, и никто не вмешивался, когда один из её старших братьев стал жестоким. Когда другой брат поступил в колледж, Тара решила попробовать новый образ жизни. Её стремление к знаниям преобразило её, перенеся через океаны и континенты, в Гарвард и в Кембриджский университет.",
     price: 17.99,
     discountPrice: 15.99,
     category: "books",
@@ -1477,7 +1477,7 @@ export const products: Product[] = [
         userId: "user56",
         userName: "Casey Wilson",
         rating: 5,
-        comment: "One of the most powerful memoirs I've ever read. A testament to the human spirit and the transformative power of education.",
+        comment: "Одни из самых сильных мемуаров, которые я когда-либо читал. Свидетельство человеческого духа и преобразующей силы образования.",
         createdAt: "2023-04-05T13:27:00Z"
       }
     ],
@@ -1486,8 +1486,8 @@ export const products: Product[] = [
   },
   {
     id: uuidv4(),
-    name: "The Invisible Life of Addie LaRue",
-    description: "France, 1714: in a moment of desperation, a young woman makes a Faustian bargain to live forever—and is cursed to be forgotten by everyone she meets. Thus begins the extraordinary life of Addie LaRue, and a dazzling adventure that will play out across centuries and continents, across history and art, as a young woman learns how far she will go to leave her mark on the world. But everything changes when, after nearly 300 years, Addie stumbles across a young man in a hidden bookstore and he remembers her name.",
+    name: "Невидимая жизнь Адди Ларю",
+    description: "Франция, 1714 год: в момент отчаяния молодая женщина заключает фаустовскую сделку, чтобы жить вечно, и проклята быть забытой всеми, кого она встречает. Так начинается необычайная жизнь Адди Ларю и ослепительное приключение, которое разворачивается на протяжении веков и континентов, через историю и искусство, когда молодая женщина узнает, как далеко она готова пойти, чтобы оставить свой след в мире. Но всё меняется, когда, почти через 300 лет, Адди натыкается на молодого человека в скрытом книжном магазине, и он помнит её имя.",
     price: 26.99,
     category: "books",
     images: [
@@ -1502,7 +1502,7 @@ export const products: Product[] = [
         userId: "user57",
         userName: "Morgan Lee",
         rating: 5,
-        comment: "A haunting, beautiful tale about memory, art, and what it means to leave a mark on the world. Absolutely mesmerizing.",
+        comment: "Преследующая, красивая история о памяти, искусстве и о том, что значит оставить след в мире. Совершенно завораживает.",
         createdAt: "2023-06-10T10:42:00Z"
       }
     ],
@@ -1607,54 +1607,54 @@ export const faqData: FAQ[] = [
     id: uuidv4(),
     question: "Какова ваша политика возврата?",
     answer: "Мы предлагаем 30-дневную политику возврата для большинства предметов.Продукты должны быть неиспользованы в их оригинальной упаковке, а в том же состоянии вы их получили.Чтобы начать возврат, войдите в свою учетную запись и перейдите в раздел истории заказа.",
-    category: "Returns & Refunds"
+    category: "Возврат товаров и возврат денежных средств"
   },
   {
     id: uuidv4(),
     question: "Сколько времени занимает доставка?",
     answer: "Стандартная доставка обычно занимает 3-5 рабочих дней в континентальной части США.Экспресс-варианты доставки (2-дневная и ночевка) также доступны при оформлении заказа за дополнительную плату.Международное время доставки варьируется в зависимости от пункта назначения, обычно занимая 7-14 рабочих дней.",
-    category: "Shipping"
+    category: "Доставка"
   },
   {
     id: uuidv4(),
     question: "Вы отправляете на международном уровне?",
     answer: "Да, мы отправляемся в большинство стран по всему миру.Международные варианты доставки, затраты и сроки доставки будут рассчитаны при оформлении заказа на основе вашего местоположения.Обратите внимание, что клиенты несут ответственность за любые таможенные сборы или импортные пошлины, которые могут применяться.",
-    category: "Shipping"
+    category: "Доставка"
   },
   {
     id: uuidv4(),
     question: "Как я могу изменить или отменить заказ?",
     answer: "Если вам нужно изменить или отменить заказ, пожалуйста, свяжитесь с нашей командой по обслуживанию клиентов как можно скорее.Обычно мы можем приспособить изменения, если заказ еще не был обработан для доставки, что обычно происходит в течение 1-2 часов после заказа.",
-    category: "Orders"
+    category: "Заказы"
   },
   {
     id: uuidv4(),
     question: "Какие способы оплаты вы принимаете?",
     answer: "Мы принимаем все основные кредитные карты (Visa, Mastercard, American Express, Discover), PayPal, Apple Pay и Google Pay.По соображениям безопасности мы не принимаем наличные, чеки или COD (наличные на доставке).",
-    category: "Payment"
+    category: "Оплата"
   },
   {
     id: uuidv4(),
     question: "Мои платежные данные безопасны?",
     answer: "Абсолютно.Мы используем стандартный отраслевой шифрование и безопасные процессоры платежей, чтобы гарантировать, что ваша платежная информация всегда защищена.Мы никогда не храним ваши полные данные кредитной карты на наших серверах.",
-    category: "Payment"
+    category: "Оплата"
   },
   {
     id: uuidv4(),
-    question: "HКак создать учетную запись?",
+    question: "Как создать учетную запись?",
     answer: "Вы можете создать учетную запись, нажав ссылку «Зарегистрироваться» в правом верхнем углу нашего веб -сайта.Вам нужно будет предоставить свой адрес электронной почты и создать пароль.Вы также можете зарегистрироваться в процессе оформления заказа, если вы совершаете свою первую покупку.",
-    category: "Account"
+    category: "Счет"
   },
   {
     id: uuidv4(),
     question: "Как сбросить пароль?",
     answer: "Если вы забыли свой пароль, нажмите на ссылку «Вход», затем выберите «Забыли свой пароль?»Введите адрес электронной почты, связанный с вашей учетной записью, и мы отправим вам инструкции для сброса вашего пароля.",
-    category: "Account"
+    category: "Счет"
   },
   {
     id: uuidv4(),
     question: "Вы предлагаете гарантию на продукты?",
     answer: "Гарантийное покрытие варьируется в зависимости от категории продуктов и бренда.Большинство электроники поставляются с 1-летней гарантией производителя, в то время как мебель обычно включает в себя 3-летнюю гарантию на производственные дефекты.Полная гарантийная информация доступна на каждой странице продукта.",
-    category: "Products"
+    category: "Товары"
   }
 ];

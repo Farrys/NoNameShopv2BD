@@ -47,14 +47,14 @@ export default function CheckoutPage() {
     // Redirect if cart is empty
     if (items.length === 0) {
       navigate('/cart');
-      toast.error('Your cart is empty');
+      toast.error('Ваша тележка пуста');
     }
   }, [user, items, navigate]);
   
   const handleNextStep = () => {
     if (step === 'shipping') {
       if (!selectedAddress) {
-        toast.error('Please select a shipping address');
+        toast.error('Пожалуйста, выберите адрес доставки');
         return;
       }
       setStep('payment');
@@ -75,19 +75,19 @@ export default function CheckoutPage() {
   
   const validateCardDetails = () => {
     if (!cardDetails.name.trim()) {
-      toast.error('Please enter the cardholder name');
+      toast.error('Пожалуйста, введите имя владельца карты');
       return false;
     }
     if (!cardDetails.number.trim() || cardDetails.number.replace(/\s/g, '').length !== 16) {
-      toast.error('Please enter a valid card number');
+      toast.error('Пожалуйста, введите действительный номер карты');
       return false;
     }
     if (!cardDetails.expiry.trim() || !cardDetails.expiry.includes('/')) {
-      toast.error('Please enter a valid expiry date (MM/YY)');
+      toast.error('Пожалуйста, введите действующую дату истечения (мм/YY)');
       return false;
     }
     if (!cardDetails.cvc.trim() || cardDetails.cvc.length < 3) {
-      toast.error('Please enter a valid CVC code');
+      toast.error('Пожалуйста, введите действительный код CVC');
       return false;
     }
     return true;
@@ -95,7 +95,7 @@ export default function CheckoutPage() {
   
   const handlePlaceOrder = async () => {
     if (!agreeToTerms) {
-      toast.error('Please agree to the terms and conditions');
+      toast.error('Пожалуйста, согласны с условиями');
       return;
     }
     
@@ -112,9 +112,9 @@ export default function CheckoutPage() {
       // Clear cart and redirect to success page
       clearCart();
       navigate(`/profile/orders?success=true&orderId=${orderId}`);
-      toast.success('Order placed successfully!');
+      toast.success('Заказ выполнен успешно !');
     } catch (error) {
-      toast.error('Failed to place order. Please try again.');
+      toast.error('Не удалось разместить заказ.Пожалуйста, попробуйте еще раз.');
     } finally {
       setIsProcessing(false);
     }
@@ -136,7 +136,7 @@ export default function CheckoutPage() {
               }`}>
                 1
               </div>
-              <span className="text-sm mt-1">Shipping</span>
+              <span className="text-sm mt-1">Доставка</span>
             </div>
             <div className="w-24 h-1 bg-gray-200">
               <div className={`h-full bg-primary ${step !== 'shipping' ? 'w-full' : 'w-0'} transition-all duration-300`}></div>
@@ -147,7 +147,7 @@ export default function CheckoutPage() {
               }`}>
                 2
               </div>
-              <span className="text-sm mt-1">Payment</span>
+              <span className="text-sm mt-1">Оплата</span>
             </div>
             <div className="w-24 h-1 bg-gray-200">
               <div className={`h-full bg-primary ${step === 'review' ? 'w-full' : 'w-0'} transition-all duration-300`}></div>
@@ -158,7 +158,7 @@ export default function CheckoutPage() {
               }`}>
                 3
               </div>
-              <span className="text-sm mt-1">Review</span>
+              <span className="text-sm mt-1">Обзор </span>
             </div>
           </div>
         </div>
@@ -170,13 +170,13 @@ export default function CheckoutPage() {
             {step === 'shipping' && (
               <div className="bg-white rounded-lg shadow-sm overflow-hidden">
                 <div className="p-4 border-b">
-                  <h2 className="font-medium">Shipping Information</h2>
+                  <h2 className="font-medium">Информация о доставке</h2>
                 </div>
                 
                 <div className="p-6">
                   {/* User profile info */}
                   <div className="mb-6">
-                    <h3 className="text-sm font-medium text-gray-500 mb-2">Contact Information</h3>
+                    <h3 className="text-sm font-medium text-gray-500 mb-2">Контактная информация</h3>
                     <p className="font-medium">{user?.name}</p>
                     <p className="text-gray-600">{user?.email}</p>
                   </div>
@@ -184,7 +184,7 @@ export default function CheckoutPage() {
                   {/* Shipping Addresses */}
                   <div>
                     <div className="flex justify-between items-center mb-4">
-                      <h3 className="text-sm font-medium text-gray-500">Shipping Address</h3>
+                      <h3 className="text-sm font-medium text-gray-500">Адрес доставки</h3>
                     </div>
                     
                     {user?.addresses && user.addresses.length > 0 ? (
@@ -216,7 +216,7 @@ export default function CheckoutPage() {
                                 <p className="text-gray-600">{address.country}</p>
                                 {address.isDefault && (
                                   <span className="inline-block mt-1 text-xs bg-gray-100 rounded px-2 py-0.5">
-                                    Default Address
+                                    Адрес по умолчанию
                                   </span>
                                 )}
                               </div>
@@ -226,7 +226,7 @@ export default function CheckoutPage() {
                       </div>
                     ) : (
                       <div className="text-center py-6 border rounded-lg">
-                        <p className="text-gray-500 mb-4">You don't have any saved addresses.</p>
+                        <p className="text-gray-500 mb-4">У вас нет сохраненных адресов.</p>
                       </div>
                     )}
                   </div>
@@ -238,7 +238,7 @@ export default function CheckoutPage() {
             {step === 'payment' && (
               <div className="bg-white rounded-lg shadow-sm overflow-hidden">
                 <div className="p-4 border-b">
-                  <h2 className="font-medium">Payment Method</h2>
+                  <h2 className="font-medium">Способ оплаты</h2>
                 </div>
                 
                 <div className="p-6">
@@ -260,7 +260,7 @@ export default function CheckoutPage() {
                         />
                         <div className="flex-grow">
                           <div className="flex justify-between">
-                            <p className="font-medium">Credit Card</p>
+                            <p className="font-medium">Кредитная карта</p>
                             <div className="flex space-x-2">
                               <div className="w-8 h-5 bg-blue-900 rounded"></div>
                               <div className="w-8 h-5 bg-red-500 rounded"></div>
@@ -271,7 +271,7 @@ export default function CheckoutPage() {
                           {paymentMethod === 'credit-card' && (
                             <div className="mt-4 space-y-3">
                               <div>
-                                <label className="block text-sm text-gray-600 mb-1">Cardholder Name</label>
+                                <label className="block text-sm text-gray-600 mb-1">Имя владельца карты</label>
                                 <input
                                   type="text"
                                   className="input w-full"
@@ -282,7 +282,7 @@ export default function CheckoutPage() {
                               </div>
                               
                               <div>
-                                <label className="block text-sm text-gray-600 mb-1">Card Number</label>
+                                <label className="block text-sm text-gray-600 mb-1">Номер карты</label>
                                 <input
                                   type="text"
                                   className="input w-full"
@@ -298,7 +298,7 @@ export default function CheckoutPage() {
                               
                               <div className="flex gap-4">
                                 <div className="flex-1">
-                                  <label className="block text-sm text-gray-600 mb-1">Expiry Date</label>
+                                  <label className="block text-sm text-gray-600 mb-1">Дата истечения срока действия</label>
                                   <input
                                     type="text"
                                     className="input w-full"
@@ -353,7 +353,7 @@ export default function CheckoutPage() {
                         <div>
                           <p className="font-medium">PayPal</p>
                           <p className="text-gray-500 text-sm">
-                            You will be redirected to PayPal to complete your purchase.
+                           Вы будете перенаправлены в PayPal, чтобы завершить вашу покупку.
                           </p>
                         </div>
                       </div>
@@ -363,7 +363,7 @@ export default function CheckoutPage() {
                   <div className="mt-6 flex items-start">
                     <ShieldCheck size={20} className="text-green-600 mt-0.5 mr-2 flex-shrink-0" />
                     <p className="text-sm text-gray-600">
-                      Your payment information is secure. We use industry-standard security measures to protect your data.
+                      Ваша платежная информация безопасна.Мы используем стандартные меры безопасности для защиты ваших данных.
                     </p>
                   </div>
                 </div>
@@ -374,20 +374,20 @@ export default function CheckoutPage() {
             {step === 'review' && (
               <div className="bg-white rounded-lg shadow-sm overflow-hidden">
                 <div className="p-4 border-b">
-                  <h2 className="font-medium">Review Your Order</h2>
+                  <h2 className="font-medium">Просмотрите свой заказ</h2>
                 </div>
                 
                 <div className="p-6">
                   {/* Contact & Shipping */}
                   <div className="mb-6">
-                    <h3 className="font-medium mb-3">Contact & Shipping</h3>
+                    <h3 className="font-medium mb-3">Контакты и доставка</h3>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <div className="flex justify-between mb-2">
-                        <span className="text-gray-600">Contact</span>
+                        <span className="text-gray-600">Контакт</span>
                         <span>{user?.email}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Ship to</span>
+                        <span className="text-gray-600">Доставка до</span>
                         <div className="text-right">
                           {selectedAddressData ? (
                             <>
@@ -398,7 +398,7 @@ export default function CheckoutPage() {
                               <p>{selectedAddressData.country}</p>
                             </>
                           ) : (
-                            <span>No address selected</span>
+                            <span>Никакого адреса не выбрано</span>
                           )}
                         </div>
                       </div>
@@ -407,15 +407,15 @@ export default function CheckoutPage() {
                   
                   {/* Payment */}
                   <div className="mb-6">
-                    <h3 className="font-medium mb-3">Payment</h3>
+                    <h3 className="font-medium mb-3">Оплата</h3>
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Method</span>
+                        <span className="text-gray-600">Метод</span>
                         <div className="flex items-center">
                           {paymentMethod === 'credit-card' ? (
                             <>
                               <CreditCard size={16} className="mr-2" />
-                              <span>Credit Card (**** {cardDetails.number.replace(/\s/g, '').slice(-4)})</span>
+                              <span>Кредитная карта (**** {cardDetails.number.replace(/\s/g, '').slice(-4)})</span>
                             </>
                           ) : (
                             <span>PayPal</span>
@@ -427,7 +427,7 @@ export default function CheckoutPage() {
                   
                   {/* Items */}
                   <div className="mb-6">
-                    <h3 className="font-medium mb-3">Items</h3>
+                    <h3 className="font-medium mb-3">Предметы</h3>
                     <div className="divide-y border rounded-lg overflow-hidden">
                       {items.map(item => (
                         <div key={`${item.product.id}-${item.color}-${item.size}`} className="p-4 flex items-center">
@@ -468,7 +468,7 @@ export default function CheckoutPage() {
                         className="mt-1 mr-2"
                       />
                       <span className="text-sm text-gray-600">
-                        I agree to the <a href="#" className="text-primary hover:underline">Terms & Conditions</a> and <a href="#" className="text-primary hover:underline">Privacy Policy</a>
+                        Я согласен с <a href="#" className="text-primary hover:underline">условиями использования</a> и <a href="#" className="text-primary hover:underline">политикой конфиденциальности</a>
                       </span>
                     </label>
                   </div>
@@ -512,7 +512,7 @@ export default function CheckoutPage() {
           <div className="lg:w-1/3">
             <div className="bg-white rounded-lg shadow-sm overflow-hidden sticky top-24">
               <div className="p-4 border-b">
-                <h2 className="font-medium">Order Summary</h2>
+                <h2 className="font-medium">Краткое описание заказа</h2>
               </div>
               
               <div className="p-4">
@@ -529,26 +529,26 @@ export default function CheckoutPage() {
                 
                 <div className="space-y-2 border-t pt-4">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Subtotal</span>
+                    <span className="text-gray-600">Суммка заказа до применения налога </span>
                     <span className="font-medium">{formatPrice(subtotal)}</span>
                   </div>
                   
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Shipping</span>
+                    <span className="text-gray-600">Доставка</span>
                     <span className="font-medium">
                       {shippingCost === 0 ? 'Free' : formatPrice(shippingCost)}
                     </span>
                   </div>
                   
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Tax (7%)</span>
+                    <span className="text-gray-600">Налог (7%)</span>
                     <span className="font-medium">{formatPrice(tax)}</span>
                   </div>
                 </div>
                 
                 <div className="border-t mt-4 pt-4">
                   <div className="flex justify-between">
-                    <span className="font-medium">Total</span>
+                    <span className="font-medium">Итоговая сумма заказа</span>
                     <span className="font-bold text-xl">{formatPrice(total)}</span>
                   </div>
                 </div>
