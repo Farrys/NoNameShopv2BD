@@ -13,11 +13,11 @@ export default function ProductsPage() {
   const { category } = useParams<{ category?: string }>();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const searchQuery = queryParams.get('поиск');
+  const searchQuery = queryParams.get('search');
   
   const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [pageTitle, setPageTitle] = useState('Все товары');
+  const [pageTitle, setPageTitle] = useState('All Products');
   
   useEffect(() => {
     setIsLoading(true);
@@ -38,12 +38,12 @@ export default function ProductsPage() {
           setPageTitle(validCategory.name);
         } else {
           filteredProducts = products;
-          setPageTitle('Все товары');
+          setPageTitle('Все продукты');
         }
       } else {
         // Show all products
         filteredProducts = products;
-        setPageTitle('Все товары');
+        setPageTitle('Все продукты');
       }
       
       setDisplayProducts(filteredProducts);
@@ -57,7 +57,7 @@ export default function ProductsPage() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">{pageTitle}</h1>
           <p className="text-gray-600">
-            {displayProducts.length} {displayProducts.length === 1 ? 'товар' : 'товаров'} найдено
+            {displayProducts.length} {displayProducts.length === 1 ? 'товар' : 'товары'} found
           </p>
         </div>
         

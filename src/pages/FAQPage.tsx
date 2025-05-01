@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Search } from 'lucide-react';
 import { faqData } from '../data/products';
-import { FAQ } from '../types';
+import { FAQ } from '../types/index.ts';
 
 export default function FAQPage() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);

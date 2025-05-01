@@ -132,7 +132,7 @@ export const products: Product[] = [
     discountPrice: 44.99,
     category: "clothing",
     images: [
-      "https://images.pexels.com/photos/4210672/pexels-photo-4210672.jpeg",
+      "https://images.pexels.com/photos/31835744/pexels-photo-31835744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/6311475/pexels-photo-6311475.jpeg"
     ],
     brand: "StreetStyle",
