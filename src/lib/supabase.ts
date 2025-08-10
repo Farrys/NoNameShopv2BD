@@ -9,6 +9,36 @@ if (!supabaseUrl || !supabaseAnonKey) {
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
+// Helper function to migrate existing products to database
+export const migrateProductsToDatabase = async (products: any[]) => {
+  try {
+    const { data, error } = await supabase
+      .from('products')
+      .upsert(products.map(product => ({
+        name: product.name,
+        description: product.description,
+        price: product.price,
+        discount_price: product.discountPrice || null,
+        category: product.category,
+        images: product.images,
+        brand: product.brand,
+        rating: product.rating,
+        stock: product.stock,
+        colors: product.colors || null,
+        sizes: product.sizes || null,
+        tags: product.tags || null,
+        featured: product.featured || false,
+        bestseller: product.bestseller || false,
+        new_arrival: product.newArrival || false
+      })), { onConflict: 'name' });
+    
+    if (error) throw error;
+    return { success: true, data };
+  } catch (error) {
+    console.error('Error migrating products:', error);
+    return { success: false, error };
+  }
+};
 // Database types
 export interface Database {
   public: {

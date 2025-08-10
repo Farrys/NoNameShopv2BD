@@ -11,6 +11,7 @@ import {
 import { supabase } from '../../lib/supabase';
 import { formatPrice } from '../../lib/utils';
 import { exportProductsToExcel, exportToJSON, exportToCSV } from '../../lib/export';
+import AdminProductForm from './AdminProductForm';
 import toast from 'react-hot-toast';
 
 interface Product {
@@ -43,6 +44,7 @@ export default function AdminProducts() {
   const [showAddModal, setShowAddModal] = useState(false);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [categories, setCategories] = useState<string[]>([]);
+  const [showExportMenu, setShowExportMenu] = useState(false);
   
   useEffect(() => {
     fetchProducts();
@@ -140,8 +142,14 @@ export default function AdminProducts() {
     }
     
     toast.success(`Товары экспортированы в ${format.toUpperCase()}`);
+    setShowExportMenu(false);
   };
   
+  const handleProductSaved = () => {
+    fetchProducts();
+    setShowAddModal(false);
+    setEditingProduct(null);
+  };
   if (isLoading) {
     return (
       <div className="p-6">
@@ -202,12 +210,12 @@ export default function AdminProducts() {
           </div>
           
           <div className="flex gap-2">
-            <div className="relative">
+            <div className="relative group">
               <button className="btn btn-outline flex items-center">
                 <Download size={18} className="mr-2" />
                 Экспорт
               </button>
-              <div className="absolute right-0 top-full mt-1 bg-white shadow-lg rounded-md py-1 z-10 hidden group-hover:block">
+              <div className="absolute right-0 top-full mt-1 bg-white shadow-lg rounded-md py-1 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <button
                   onClick={() => handleExport('excel')}
                   className="block px-4 py-2 text-sm hover:bg-gray-100 w-full text-left"
@@ -330,7 +338,10 @@ export default function AdminProducts() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                     <div className="flex space-x-2">
                       <button
-                        onClick={() => setEditingProduct(product)}
+                        onClick={() => {
+                          setEditingProduct(product);
+                          setShowAddModal(true);
+                        }}
                         className="text-indigo-600 hover:text-indigo-900"
                       >
                         <Edit size={16} />
@@ -363,8 +374,16 @@ export default function AdminProducts() {
         )}
       </div>
       
-      {/* Add/Edit Product Modal would go here */}
-      {/* For brevity, I'll create a separate component for this */}
+      {/* Product Form Modal */}
+      <AdminProductForm
+        product={editingProduct}
+        isOpen={showAddModal}
+        onClose={() => {
+          setShowAddModal(false);
+          setEditingProduct(null);
+        }}
+        onSave={handleProductSaved}
+      />
     </div>
   );
 }

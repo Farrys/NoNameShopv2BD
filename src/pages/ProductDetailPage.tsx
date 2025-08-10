@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Star, Heart, ShoppingCart, Share2, ChevronLeft, ChevronRight, Check, MinusCircle, PlusCircle, Truck, RotateCcw } from 'lucide-react';
-import { getProductById, getRelatedProducts } from '../data/products';
+import { useProduct, useProducts } from '../hooks/useProducts';
 import { Product } from '../types';
 import { formatPrice, getStarRating } from '../lib/utils';
 import ProductCard from '../components/products/ProductCard';
@@ -16,9 +16,13 @@ export default function ProductDetailPage() {
   const { addToCart } = useCart();
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   
-  const [product, setProduct] = useState<Product | null>(null);
-  const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  // Use custom hooks to fetch data from database
+  const { product, isLoading, error } = useProduct(id || '');
+  const { products: relatedProducts } = useProducts({
+    category: product?.category,
+    limit: 4
+  });
+  
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [selectedColor, setSelectedColor] = useState<string | undefined>(undefined);
@@ -26,41 +30,32 @@ export default function ProductDetailPage() {
   const [activeTab, setActiveTab] = useState('description');
   
   useEffect(() => {
-    setIsLoading(true);
-    
     // Reset state when product ID changes
     setCurrentImageIndex(0);
     setQuantity(1);
     setSelectedColor(undefined);
     setSelectedSize(undefined);
-    
-    if (id) {
-      // Simulate API call with a short delay
-      setTimeout(() => {
-        const foundProduct = getProductById(id);
-        if (foundProduct) {
-          setProduct(foundProduct);
-          
-          // Set default selected values
-          if (foundProduct.colors && foundProduct.colors.length > 0) {
-            setSelectedColor(foundProduct.colors[0]);
-          }
-          
-          if (foundProduct.sizes && foundProduct.sizes.length > 0) {
-            setSelectedSize(foundProduct.sizes[0]);
-          }
-          
-          // Get related products
-          setRelatedProducts(getRelatedProducts(id));
-        } else {
-          // Product not found, redirect to products page
-          navigate('/products');
-          toast.error('Product not found');
-        }
-        setIsLoading(false);
-      }, 300);
+  }, [id]);
+  
+  useEffect(() => {
+    if (product) {
+      // Set default selected values when product loads
+      if (product.colors && product.colors.length > 0) {
+        setSelectedColor(product.colors[0]);
+      }
+      
+      if (product.sizes && product.sizes.length > 0) {
+        setSelectedSize(product.sizes[0]);
+      }
     }
-  }, [id, navigate]);
+  }, [product]);
+  
+  useEffect(() => {
+    if (error) {
+      navigate('/products');
+      toast.error('Product not found');
+    }
+  }, [error, navigate]);
   
   const handleAddToCart = () => {
     if (!product) return;
@@ -107,6 +102,9 @@ export default function ProductDetailPage() {
   };
   
   const inWishlist = product ? isInWishlist(product.id) : false;
+  
+  // Filter out the current product from related products
+  const filteredRelatedProducts = relatedProducts.filter(p => p.id !== product?.id);
   
   if (isLoading) {
     return (
@@ -539,11 +537,11 @@ export default function ProductDetailPage() {
         </div>
         
         {/* Related Products */}
-        {relatedProducts.length > 0 && (
+        {filteredRelatedProducts.length > 0 && (
           <div>
             <h2 className="text-2xl font-bold mb-6">Related Products</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {relatedProducts.map(relatedProduct => (
+              {filteredRelatedProducts.slice(0, 4).map(relatedProduct => (
                 <ProductCard key={relatedProduct.id} product={relatedProduct} />
               ))}
             </div>

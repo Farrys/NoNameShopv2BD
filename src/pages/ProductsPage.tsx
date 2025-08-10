@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import { 
-  products, 
-  getProductsByCategory, 
-  searchProducts, 
-  categories 
-} from '../data/products';
+import { categories } from '../data/products';
+import { useProducts } from '../hooks/useProducts';
 import { Category, Product } from '../types';
 import ProductGrid from '../components/products/ProductGrid';
 
@@ -15,40 +11,27 @@ export default function ProductsPage() {
   const queryParams = new URLSearchParams(location.search);
   const searchQuery = queryParams.get('search');
   
-  const [displayProducts, setDisplayProducts] = useState<Product[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [pageTitle, setPageTitle] = useState('All Products');
   
+  // Use the custom hook to fetch products from database
+  const { products: displayProducts, isLoading } = useProducts({
+    category: category as Category,
+    search: searchQuery || undefined
+  });
+  
   useEffect(() => {
-    setIsLoading(true);
-    
-    // Simulate API call with a short delay
-    setTimeout(() => {
-      let filteredProducts: Product[] = [];
-      
-      if (searchQuery) {
-        // Handle search
-        filteredProducts = searchProducts(searchQuery);
-        setPageTitle(`Результаты поиска для "${searchQuery}"`);
-      } else if (category) {
-        // Handle category filter
-        const validCategory = categories.find(c => c.id === category);
-        if (validCategory) {
-          filteredProducts = getProductsByCategory(category as Category);
-          setPageTitle(validCategory.name);
-        } else {
-          filteredProducts = products;
-          setPageTitle('Все продукты');
-        }
+    if (searchQuery) {
+      setPageTitle(`Результаты поиска для "${searchQuery}"`);
+    } else if (category) {
+      const validCategory = categories.find(c => c.id === category);
+      if (validCategory) {
+        setPageTitle(validCategory.name);
       } else {
-        // Show all products
-        filteredProducts = products;
         setPageTitle('Все продукты');
       }
-      
-      setDisplayProducts(filteredProducts);
-      setIsLoading(false);
-    }, 500);
+    } else {
+      setPageTitle('Все продукты');
+    }
   }, [category, searchQuery]);
   
   return (

@@ -1,21 +1,19 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingBag, Truck, CreditCard, RefreshCw } from 'lucide-react';
-import { 
-  getFeaturedProducts, 
-  getBestsellerProducts, 
-  getNewArrivalProducts,
-  categories,
-} from '../data/products';
+import { categories } from '../data/products';
+import { useProducts } from '../hooks/useProducts';
 import ProductCard from '../components/products/ProductCard';
 import { Product } from '../types';
 import { cn } from '../lib/utils';
 
 export default function HomePage() {
-  const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
-  const [bestsellerProducts, setBestsellerProducts] = useState<Product[]>([]);
-  const [newArrivals, setNewArrivals] = useState<Product[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Use custom hooks to fetch products from database
+  const { products: featuredProducts } = useProducts({ featured: true, limit: 8 });
+  const { products: bestsellerProducts } = useProducts({ bestseller: true, limit: 4 });
+  const { products: newArrivals } = useProducts({ newArrival: true, limit: 8 });
   
   // Demo heroSlides
   const heroSlides = [
@@ -46,11 +44,6 @@ export default function HomePage() {
   ];
   
   useEffect(() => {
-    // Fetch products
-    setFeaturedProducts(getFeaturedProducts().slice(0, 8));
-    setBestsellerProducts(getBestsellerProducts().slice(0, 4));
-    setNewArrivals(getNewArrivalProducts().slice(0, 8));
-    
     // Auto-advance carousel
     const interval = setInterval(() => {
       setCurrentSlide(prevSlide => (prevSlide + 1) % heroSlides.length);
@@ -268,15 +261,15 @@ export default function HomePage() {
                     {product.discountPrice ? (
                       <div className="flex items-center">
                         <span className="font-medium text-gray-900">
-                          ${product.discountPrice.toFixed(2)}
+                          {formatPrice(product.discountPrice)}
                         </span>
                         <span className="text-sm text-gray-500 line-through ml-2">
-                          ${product.price.toFixed(2)}
+                          {formatPrice(product.price)}
                         </span>
                       </div>
                     ) : (
                       <span className="font-medium text-gray-900">
-                        ${product.price.toFixed(2)}
+                        {formatPrice(product.price)}
                       </span>
                     )}
                   </div>
